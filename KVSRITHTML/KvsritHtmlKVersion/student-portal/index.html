@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - KVSRIT</title>
+    <meta name="description"
+        content="Access student resources, examination results, and academic updates at KVSRIT Student Portal.">
+
+    <!-- Converted CSS (Tailwind to pure CSS) -->
+    <link rel="stylesheet" href="../css/core.css">
+
+    <!-- Navbar Enhanced Styling -->
+    <link rel="stylesheet" href="../css/navbar-enhanced.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ========================================
+           STUDENT PORTAL PAGE-SPECIFIC STYLES
+           These styles ONLY affect this page
+        ======================================== */
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(30, 58, 138, 0.4), rgba(30, 58, 138, 0.9));
+        }
+
+        /* CRITICAL FIX: Remove all default margins on main */
+        main {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* HERO SECTION - VISIBLE IMPROVEMENTS */
+        .student-portal-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%) !important;
+            padding: 80px 0 60px 0 !important;
+            /* Reduced top padding, visible change */
+            margin: 0 !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .student-portal-hero h1 {
+            color: #ffffff !important;
+            font-size: 3rem !important;
+            font-weight: 800 !important;
+            margin: 0 0 20px 0 !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            line-height: 1.2 !important;
+        }
+
+        .student-portal-hero p {
+            color: #e0e7ff !important;
+            font-size: 1.25rem !important;
+            margin: 0 !important;
+            line-height: 1.6 !important;
+            max-width: 600px !important;
+        }
+
+        /* MAIN CONTENT AREA - VISIBLE GRID LAYOUT */
+        .student-portal-content {
+            background: #f9fafb !important;
+            padding: 50px 0 !important;
+            /* Reduced padding for tighter layout */
+            min-height: auto !important;
+        }
+
+        .student-portal-container {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 0 24px !important;
+        }
+
+        /* GRID LAYOUT - CLEAR 2-COLUMN STRUCTURE */
+        .student-portal-grid {
+            display: grid !important;
+            grid-template-columns: 2fr 1fr !important;
+            /* 2/3 cards, 1/3 sidebar */
+            gap: 30px !important;
+            align-items: start !important;
+        }
+
+        /* CARDS GRID - VISIBLE 2-COLUMN LAYOUT */
+        .student-portal-cards {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 20px !important;
+        }
+
+        /* INDIVIDUAL CARD STYLING - VISIBLE IMPROVEMENTS */
+        .student-portal-card {
+            background: #ffffff !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+            transition: all 0.3s ease !important;
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+            /* Equal height cards */
+            min-height: 160px !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .student-portal-card:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+            border-color: #3b82f6 !important;
+        }
+
+        .student-portal-card-icon {
+            width: 48px !important;
+            height: 48px !important;
+            border-radius: 10px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-bottom: 16px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .student-portal-card:hover .student-portal-card-icon {
+            transform: scale(1.1) !important;
+        }
+
+        .student-portal-card h3 {
+            font-size: 1.125rem !important;
+            font-weight: 700 !important;
+            color: #111827 !important;
+            margin: 0 0 8px 0 !important;
+        }
+
+        .student-portal-card p {
+            font-size: 0.875rem !important;
+            color: #6b7280 !important;
+            margin: 0 !important;
+            line-height: 1.5 !important;
+        }
+
+        /* SIDEBAR - LOGIN & UPDATES */
+        .student-portal-sidebar {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 24px !important;
+        }
+
+        .student-portal-login {
+            background: #ffffff !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 12px !important;
+            padding: 28px !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .student-portal-login h3 {
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+            color: #111827 !important;
+            margin: 0 0 20px 0 !important;
+        }
+
+        .student-portal-login label {
+            display: block !important;
+            font-size: 0.875rem !important;
+            font-weight: 600 !important;
+            color: #374151 !important;
+            margin-bottom: 6px !important;
+        }
+
+        .student-portal-login input {
+            width: 100% !important;
+            padding: 10px 14px !important;
+            border: 1px solid #d1d5db !important;
+            border-radius: 8px !important;
+            font-size: 0.875rem !important;
+            margin-bottom: 16px !important;
+            transition: all 0.2s ease !important;
+            box-sizing: border-box !important;
+        }
+
+        .student-portal-login input:focus {
+            outline: none !important;
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        }
+
+        .student-portal-login button {
+            width: 100% !important;
+            padding: 12px !important;
+            background: #3b82f6 !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 0.875rem !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .student-portal-login button:hover {
+            background: #2563eb !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+        }
+
+        .student-portal-login a {
+            display: block !important;
+            text-align: center !important;
+            font-size: 0.813rem !important;
+            color: #3b82f6 !important;
+            margin-top: 12px !important;
+            text-decoration: none !important;
+        }
+
+        .student-portal-login a:hover {
+            text-decoration: underline !important;
+        }
+
+        /* UPDATES SECTION */
+        .student-portal-updates {
+            background: #ffffff !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .student-portal-updates h3 {
+            font-size: 1.125rem !important;
+            font-weight: 700 !important;
+            color: #111827 !important;
+            margin: 0 0 16px 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+        }
+
+        .student-portal-update-item {
+            padding: 12px 0 !important;
+            border-bottom: 1px solid #f3f4f6 !important;
+        }
+
+        .student-portal-update-item:last-child {
+            border-bottom: none !important;
+        }
+
+        .student-portal-update-date {
+            font-size: 0.75rem !important;
+            color: #9ca3af !important;
+            margin-bottom: 4px !important;
+        }
+
+        .student-portal-update-link {
+            font-size: 0.875rem !important;
+            font-weight: 600 !important;
+            color: #111827 !important;
+            text-decoration: none !important;
+            display: block !important;
+        }
+
+        .student-portal-update-link:hover {
+            color: #3b82f6 !important;
+        }
+
+        /* RESPONSIVE - MOBILE STACKING */
+        @media (max-width: 768px) {
+            .student-portal-hero h1 {
+                font-size: 2rem !important;
+            }
+
+            .student-portal-hero p {
+                font-size: 1rem !important;
+            }
+
+            .student-portal-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .student-portal-cards {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* COLOR CLASSES FOR ICONS */
+        .icon-blue {
+            background: #dbeafe !important;
+            color: #1e40af !important;
+        }
+
+        .icon-green {
+            background: #d1fae5 !important;
+            color: #065f46 !important;
+        }
+
+        .icon-yellow {
+            background: #fef3c7 !important;
+            color: #92400e !important;
+        }
+
+        .icon-purple {
+            background: #e9d5ff !important;
+            color: #6b21a8 !important;
+        }
+
+        .icon-orange {
+            background: #fed7aa !important;
+            color: #9a3412 !important;
+        }
+
+        .icon-gray {
+            background: #f3f4f6 !important;
+            color: #374151 !important;
+        }
+
+        .student-portal-card:hover .icon-blue {
+            background: #1e40af !important;
+            color: #ffffff !important;
+        }
+
+        .student-portal-card:hover .icon-green {
+            background: #065f46 !important;
+            color: #ffffff !important;
+        }
+
+        .student-portal-card:hover .icon-yellow {
+            background: #92400e !important;
+            color: #ffffff !important;
+        }
+
+        .student-portal-card:hover .icon-purple {
+            background: #6b21a8 !important;
+            color: #ffffff !important;
+        }
+
+        .student-portal-card:hover .icon-orange {
+            background: #9a3412 !important;
+            color: #ffffff !important;
+        }
+
+        .student-portal-card:hover .icon-gray {
+            background: #374151 !important;
+            color: #ffffff !important;
+        }
+    </style>
+
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section - VISIBLY IMPROVED -->
+        <div class="student-portal-hero">
+            <div class="student-portal-container">
+                <h1>Student Portal</h1>
+                <p>Your gateway to academic resources, exam notifications, and campus updates.</p>
+            </div>
+        </div>
+
+        <!-- Main Content Area - VISIBLY IMPROVED GRID -->
+        <div class="student-portal-content">
+            <div class="student-portal-container">
+                <div class="student-portal-grid">
+
+                    <!-- Cards Section - CLEAR 2-COLUMN GRID -->
+                    <div class="student-portal-cards">
+
+                        <!-- Examination Results Card -->
+                        <a href="#" class="student-portal-card">
+                            <div class="student-portal-card-icon icon-blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                                    <path d="M14 2v4h4" />
+                                    <path d="m9 15 2 2 4-4" />
+                                </svg>
+                            </div>
+                            <h3>Examination Results</h3>
+                            <p>Check your semester results and internal marks.</p>
+                        </a>
+
+                        <!-- My Timetable Card -->
+                        <a href="#" class="student-portal-card">
+                            <div class="student-portal-card-icon icon-green">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M8 2v4" />
+                                    <path d="M16 2v4" />
+                                    <rect width="18" height="18" x="3" y="4" rx="2" />
+                                    <path d="M3 10h18" />
+                                </svg>
+                            </div>
+                            <h3>My Timetable</h3>
+                            <p>View your class schedule and academic calendar.</p>
+                        </a>
+
+                        <!-- Fee Payment Card -->
+                        <a href="#" class="student-portal-card">
+                            <div class="student-portal-card-icon icon-yellow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="14" x="2" y="5" rx="2" />
+                                    <line x1="2" x2="22" y1="10" y2="10" />
+                                </svg>
+                            </div>
+                            <h3>Fee Payment</h3>
+                            <p>Pay tuition and exam fees online securely.</p>
+                        </a>
+
+                        <!-- Attendance Status Card -->
+                        <a href="#" class="student-portal-card">
+                            <div class="student-portal-card-icon icon-purple">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <polyline points="16 11 18 13 22 9" />
+                                </svg>
+                            </div>
+                            <h3>Attendance Status</h3>
+                            <p>Track your daily and monthly attendance.</p>
+                        </a>
+
+                        <!-- Digital Library Card -->
+                        <a href="#" class="student-portal-card">
+                            <div class="student-portal-card-icon icon-orange">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                            </div>
+                            <h3>Digital Library</h3>
+                            <p>Access e-books, journals and previous question papers.</p>
+                        </a>
+
+                        <!-- Profile Settings Card -->
+                        <a href="#" class="student-portal-card">
+                            <div class="student-portal-card-icon icon-gray">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.47a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.39a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </div>
+                            <h3>Profile Settings</h3>
+                            <p>Update your contact details and password.</p>
+                        </a>
+
+                    </div>
+
+                    <!-- Sidebar - Login & Updates -->
+                    <div class="student-portal-sidebar">
+
+                        <!-- Student Login Box -->
+                        <div class="student-portal-login">
+                            <h3>Student Login</h3>
+                            <form
+                                onsubmit="event.preventDefault(); alert('This is a static demo. Login functionality requires a backend.');">
+                                <label>Roll Number</label>
+                                <input type="text" placeholder="Enter Roll No" required>
+
+                                <label>Password</label>
+                                <input type="password" placeholder="Enter Password" required>
+
+                                <button type="submit">Sign In</button>
+                                <a href="#">Forgot Password?</a>
+                            </form>
+                        </div>
+
+                        <!-- Latest Updates -->
+                        <div class="student-portal-updates">
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" style="color: #3b82f6;">
+                                    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                                    <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                                </svg>
+                                Latest Updates
+                            </h3>
+                            <div class="student-portal-update-item">
+                                <div class="student-portal-update-date">June 15, 2024</div>
+                                <a href="#" class="student-portal-update-link">Registration open for CRT Classes</a>
+                            </div>
+                            <div class="student-portal-update-item">
+                                <div class="student-portal-update-date">June 10, 2024</div>
+                                <a href="#" class="student-portal-update-link">IV B.Tech Examination Schedule
+                                    Released</a>
+                            </div>
+                            <div class="student-portal-update-item">
+                                <div class="student-portal-update-date">June 05, 2024</div>
+                                <a href="#" class="student-portal-update-link">Library due date extended for 3rd
+                                    Year</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script>window.rootPath = '../';</script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+
+</body>
+
+</html>

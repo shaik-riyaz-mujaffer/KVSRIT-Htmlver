@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliation and Accreditation - KVSRIT</title>
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <script src="../assets/js/components.js"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Navbar Enhanced CSS (REQUIRED for navbar styling) -->
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/navbar-enhanced.css">
+
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* Page-specific styles */
+        .affiliation-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            margin-top: 40px;
+        }
+
+        .affiliation-table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .affiliation-row {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            border-bottom: 2px dashed #e5e7eb;
+            transition: background-color 0.3s ease;
+        }
+
+        .affiliation-row:last-child {
+            border-bottom: none;
+        }
+
+        .affiliation-row:hover {
+            background-color: #f8fafc;
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 40px;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .content-container {
+            flex: 1;
+        }
+
+        .content-container h3 {
+            color: #1e3a8a;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .content-container a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .content-container a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .affiliation-row {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .logo-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 150px;
+                height: 150px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .affiliation-content {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Component -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Affiliation & Accreditation</h1>
+        <p>Our recognitions and certifications</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="affiliation-content">
+        <div class="affiliation-table">
+            <!-- KVSRIT Establishment -->
+            <div class="affiliation-row">
+                <div class="logo-container">
+                    <img src="../assets/images/kvsrlogo.jpg" alt="KVSRIT Logo">
+                </div>
+                <div class="content-container">
+                    <h3>Established in the year 2007-08.</h3>
+                </div>
+            </div>
+
+            <!-- AICTE Approval -->
+            <div class="affiliation-row">
+                <div class="logo-container">
+                    <img src="../assets/images/aictelogo.jpg" alt="AICTE Logo">
+                </div>
+                <div class="content-container">
+                    <h3>Approved by All India Council for Technical Education (AICTE), New Delhi.</h3>
+                </div>
+            </div>
+
+            <!-- ISO EMS Certification -->
+            <div class="affiliation-row">
+                <div class="logo-container">
+                    <img src="../assets/images/isologo.jpg" alt="ISO Logo">
+                </div>
+                <div class="content-container">
+                    <h3><a href="../assets/documents/kvsr-iso-ems.pdf" target="_blank">Received ISO 9001 : 2000
+                            Certification for Environmental Management System</a></h3>
+                </div>
+            </div>
+
+            <!-- ISO QMS Certification -->
+            <div class="affiliation-row">
+                <div class="logo-container">
+                    <img src="../assets/images/isologo.jpg" alt="ISO Logo">
+                </div>
+                <div class="content-container">
+                    <h3><a href="../assets/documents/kvsr-iso-qms.pdf" target="_blank">Received ISO 9001 : 2000
+                            Certification for Quality Management System</a></h3>
+                </div>
+            </div>
+
+            <!-- JNTUA Affiliation -->
+            <div class="affiliation-row">
+                <div class="logo-container">
+                    <img src="../assets/images/jntualogo.jpg" alt="JNTUA Logo">
+                </div>
+                <div class="content-container">
+                    <h3>Permanent Affiliation JNTUA, Anantapuramu.</h3>
+                </div>
+            </div>
+
+            <!-- NBA Accreditation -->
+            <div class="affiliation-row">
+                <div class="logo-container">
+                    <img src="../assets/images/nbalogo.jpg" alt="NBA Logo">
+                </div>
+                <div class="content-container">
+                    <h3>B.Tech in CSE, ECE, & EEE are accredited by the National Board of Accreditation NBA</h3>
+                </div>
+            </div>
+
+            <!-- NAAC Accreditation -->
+            <div class="affiliation-row">
+                <div class="logo-container">
+                    <img src="../assets/images/NAAC.jpg" alt="NAAC Logo">
+                </div>
+                <div class="content-container">
+                    <h3>Accredited by NAAC at A+ grade with a CGPA of 3.30 on a scale of 4.</h3>
+                </div>
+            </div>
+
+            <!-- UGC Recognition -->
+            <div class="affiliation-row">
+                <div class="logo-container">
+                    <img src="../assets/images/ugclogo.jpg" alt="UGC Logo">
+                </div>
+                <div class="content-container">
+                    <h3>Approved by UGC, New Delhi recognition under 2(f) & 12(B).</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

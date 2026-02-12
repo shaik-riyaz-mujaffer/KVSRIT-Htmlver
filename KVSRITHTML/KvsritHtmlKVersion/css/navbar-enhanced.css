@@ -1,0 +1,534 @@
+/* ==========================================================================
+   KVSRIT Enhanced Navbar Styles
+   Professional Academic Design Standards
+   Refined for Visual Excellence & Accessibility
+   ========================================================================== */
+
+/* 1. TYPOGRAPHY & VARIABLES
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Font Families */
+    --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Color Palette - Professional Academic Blue */
+    --color-primary: #0f172a;
+    /* Slate 900 for text */
+    --color-secondary: #1e3a8a;
+    /* Blue 900 for top bar base */
+    --color-accent: #2563eb;
+    /* Blue 600 for interactions */
+    --color-accent-hover: #1d4ed8;
+    /* Blue 700 for active states */
+    --color-bg-light: #ffffff;
+    --color-bg-off-white: #f8fafc;
+    --color-border: #e2e8f0;
+
+    /* Spacing Units */
+    --spacing-unit: 8px;
+    --navbar-height: 80px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-dropdown: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Requested soft shadow */
+
+    /* Transitions */
+    --transition-fast: 200ms ease-in-out;
+    --transition-medium: 300ms ease-in-out;
+}
+
+/* ==========================================================================
+   2. TOP CONTACT BAR REFINEMENT
+   ========================================================================== */
+/* Targeted via specific selector to override Tailwind classes */
+#navbar-placeholder>div.bg-blue-900 {
+    font-family: var(--font-primary);
+    background: linear-gradient(90deg, #0f172a 0%, #1e3a8a 100%);
+    font-size: 14px;
+    /* Requested 14-15px */
+    line-height: 1.5;
+    /* Requested 1.5-1.6 */
+    padding-top: 10px;
+    /* Requested 8-12px vertical */
+    padding-bottom: 10px;
+    min-height: 44px;
+    /* Prevent collapse - ensures consistent height */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner Container */
+#navbar-placeholder>div.bg-blue-900>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left Contact Info Items */
+#navbar-placeholder>div.bg-blue-900 .flex.items-center.gap-4 .gap-1,
+#navbar-placeholder>div.bg-blue-900>div>div:first-child span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Icon spacing */
+    margin-right: 16px;
+    /* Requested 12-16px horizontal spacing */
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    /* High contrast */
+}
+
+/* Icons in Top Bar */
+#navbar-placeholder>div.bg-blue-900 i,
+#navbar-placeholder>div.bg-blue-900 svg {
+    width: 16px;
+    height: 16px;
+    opacity: 0.9;
+}
+
+/* Right Side Links */
+#navbar-placeholder>div.bg-blue-900>div>div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* Requested 12-16px spacing */
+}
+
+/* Links Hover Effect */
+#navbar-placeholder>div.bg-blue-900 a {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.2s ease, opacity 0.2s ease;
+    text-decoration: none;
+}
+
+#navbar-placeholder>div.bg-blue-900 a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Pipe Separator - Fade out slightly */
+#navbar-placeholder>div.bg-blue-900 .text-gray-500 {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   3. MAIN NAVIGATION MENU
+   ========================================================================== */
+#main-nav {
+    font-family: var(--font-primary);
+    background: rgba(255, 255, 255, 1);
+    transition: box-shadow var(--transition-medium), background-color var(--transition-medium);
+    height: var(--navbar-height);
+    /* Enforce height */
+    min-height: 80px;
+    /* Prevent shrinking */
+    max-height: 80px;
+    /* Prevent expansion */
+}
+
+/* Scroll State (Applied via JS) */
+#main-nav.scrolled {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    /* Requested 1-2px subtle box-shadow */
+    background: rgba(255, 255, 255, 0.98);
+}
+
+/* Inner Flex Container */
+#nav-inner {
+    height: 100%;
+}
+
+/* Logo Alignment */
+#main-nav .flex-shrink-0 {
+    display: flex;
+    align-items: center;
+    /* Ensure baseline alignment with alignment helpers if needed */
+}
+
+#main-nav .flex-shrink-0 img {
+    height: 48px;
+    /* Refined size */
+    width: auto;
+    transition: transform var(--transition-medium);
+}
+
+#main-nav .flex-shrink-0:hover img {
+    transform: scale(1.05);
+    /* Micro-interaction */
+}
+
+/* Logo Text Refining */
+#main-nav h1 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--color-secondary);
+    letter-spacing: -0.02em;
+}
+
+/* Desktop Menu Container */
+#main-nav .hidden.xl\:flex {
+    align-items: center;
+}
+
+/* Main Menu Items (Anchors and Buttons) */
+#main-nav .hidden.xl\:flex>a,
+#main-nav .hidden.xl\:flex button {
+    /* Targeting the triggers */
+    font-size: 16px;
+    /* Requested 16-18px */
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 8px 12px;
+    /* Requested 8px vertical, 12px horizontal */
+    transition: all var(--transition-fast);
+    position: relative;
+    background: transparent;
+    border: none;
+    /* Remove all borders */
+    outline: none;
+    /* Remove outline on focus */
+}
+
+/* Hover State */
+#main-nav .hidden.xl\:flex>a:hover,
+#main-nav .hidden.xl\:flex button:hover,
+#main-nav .hidden.xl\:flex button[aria-expanded="true"] {
+    color: var(--color-accent);
+    background-color: var(--color-bg-off-white);
+}
+
+/* Bottom Border Reveal */
+#main-nav .hidden.xl\:flex>a::after,
+#main-nav .hidden.xl\:flex button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    /* Align with padding */
+    right: 12px;
+    height: 2px;
+    /* Requested 2-3px */
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#main-nav .hidden.xl\:flex>a:hover::after,
+#main-nav .hidden.xl\:flex button:hover::after,
+#main-nav .hidden.xl\:flex button[aria-expanded="true"]::after {
+    transform: scaleX(1);
+}
+
+/* Chevron Rotation */
+#main-nav svg.transition-transform {
+    transition: transform 250ms ease;
+}
+
+#main-nav button[aria-expanded="true"] svg.transition-transform {
+    transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   4. DROPDOWN MENUS
+   ========================================================================== */
+/* Dropdown Container */
+#main-nav [role="menu"] {
+    background: #ffffff;
+    border-radius: 8px;
+    /* Requested 6-8px */
+    box-shadow: var(--shadow-dropdown);
+    padding: 12px;
+    /* Requested 12px all-around */
+    min-width: 220px;
+    /* Requested 16px extending beyond parent approx */
+
+    /* Animation Initial State */
+    opacity: 0;
+    transform: translateY(6px);
+    /* Requested 4-6px slide down */
+    visibility: hidden;
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out, visibility 200ms;
+    pointer-events: none;
+
+    margin-top: 10px;
+    /* Spacing from trigger */
+    z-index: 1000;
+    /* Ensure dropdowns appear above all content */
+}
+
+/* Invisible bridge to prevent dropdown closing on hover gap */
+#main-nav [role="menu"]::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: transparent;
+}
+
+/* Visible State (Handling existing logic class toggling) */
+/* The existing JS removes 'invisible' and 'opacity-0'. 
+   We need to ensure our styles apply when those classes are removed or controlled via aria-expanded/hover */
+
+#main-nav div[data-dropdown]:hover>[role="menu"],
+#main-nav div[data-dropdown] button[aria-expanded="true"]+[role="menu"],
+#main-nav [role="menu"]:not(.invisible) {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Dropdown Items */
+#main-nav [role="menu"] a {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    /* Requested 40px min-height */
+    padding: 8px 12px;
+    /* 8px padding */
+    font-size: 14px;
+    color: var(--color-primary);
+    border-radius: 4px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    transition: background-color 200ms ease, transform 150ms ease;
+}
+
+#main-nav [role="menu"] a:hover {
+    background-color: var(--color-bg-off-white);
+    color: var(--color-accent);
+    transform: translateX(4px);
+    /* Subtle shift */
+}
+
+/* Dropdown Arrow Alignment */
+/* Ensuring the dropdown is centered relative to parent is tricky with 'absolute left-0' in HTML.
+   We can adjust this if we assume fixed widths, but strictly preserving structure means we use what we have.
+   However, we can improve the visual positioning if needed. */
+
+/* Mega Menu Specifics (Departments) */
+#main-nav [role="menu"].w-\[640px\] {
+    width: 640px;
+    /* Consistent width for mega menu */
+    border-radius: 12px;
+}
+
+#main-nav [role="menu"].w-\[640px\] .grid {
+    gap: 16px;
+}
+
+#main-nav [role="menu"].w-\[640px\] a {
+    align-items: start;
+    padding: 12px;
+    height: auto;
+    transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+#main-nav [role="menu"].w-\[640px\] a:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. MOBILE NAV VISUALS
+   ========================================================================== */
+/* Hamburger Button */
+#mobile-menu-btn {
+    width: 44px;
+    /* Requested 44px touch target */
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background-color 200ms ease;
+}
+
+#mobile-menu-btn:hover,
+#mobile-menu-btn:active {
+    background-color: var(--color-bg-off-white);
+    color: var(--color-accent);
+}
+
+/* Mobile Menu Container - Animated Slide */
+#mobile-menu {
+    border-top: 1px solid var(--color-border);
+    background: #ffffff;
+    /* Styles for animation */
+    transition: max-height 250ms ease-in-out, opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* Mobile Links */
+#mobile-menu a {
+    display: block;
+    padding: 12px 16px;
+    /* 16px horiz, 12px vert */
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-border);
+    /* Separator lines */
+    margin-bottom: 4px;
+    /* 8px gap simulated with padding/margin */
+    border-radius: 0;
+}
+
+#mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+/* Apply Now Button Mobile */
+#mobile-menu a.bg-blue-600 {
+    background: var(--color-accent);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 16px;
+    border: none;
+}
+
+/* ==========================================================================
+   6. ACTION BUTTONS (APPLY, SEARCH)
+   ========================================================================== */
+/* Primary Action Button (Apply Now) */
+#main-nav a[href*="admissions"].bg-blue-600 {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #1d4ed8 100%);
+    padding: 10px 24px;
+    border-radius: 30px;
+    /* Pill shape */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+#main-nav a[href*="admissions"].bg-blue-600:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+}
+
+/* Search Icon */
+#search-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+    transition: bac kground-color 200ms ease;
+}
+
+#search-btn:hover {
+    background-color: var(--color-bg-off-white);
+    color: var(--color-accent);
+}
+
+/* Student Portal Button */
+#main-nav a[href*="student-portal"] {
+    border: 1px solid var(--color-border);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 200ms ease;
+}
+
+#main-nav a[href*="student-portal"]:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* ==========================================================================
+   7. PRINT STYLES
+   ========================================================================== */
+@media print {
+
+    #navbar-placeholder>div.bg-blue-900,
+    #main-nav {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   8. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #navbar-placeholder>div.bg-blue-900 {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+
+    #main-nav .hidden.xl\:flex {
+        gap: 16px;
+        /* Reduce gap on smaller screens if visible, though xl:hidden is default */
+    }
+}
+
+/* ==========================================================================
+   DROPDOWN BORDER REMOVAL - COMPREHENSIVE
+   ========================================================================== */
+
+/* Remove borders from all navbar dropdown trigger buttons */
+#main-nav .hidden.xl\:flex>a,
+#main-nav .hidden.xl\:flex button,
+#main-nav .hidden.xl\:flex>button,
+#main-nav button[aria-expanded],
+#main-nav button[aria-haspopup="true"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove borders from dropdown menu containers */
+#main-nav [role="menu"],
+#main-nav div[role="menu"],
+#main-nav .absolute[role="menu"] {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Remove borders from all dropdown menu items */
+#main-nav [role="menu"] a,
+#main-nav [role="menu"]>a,
+#main-nav div[role="menu"] a,
+#main-nav [role="menu"] li,
+#main-nav [role="menu"] button {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Remove borders on focus states */
+#main-nav .hidden.xl\:flex>a:focus,
+#main-nav .hidden.xl\:flex button:focus,
+#main-nav [role="menu"] a:focus,
+#main-nav button[aria-expanded]:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove borders on active states */
+#main-nav .hidden.xl\:flex>a:active,
+#main-nav .hidden.xl\:flex button:active,
+#main-nav [role="menu"] a:active {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Ensure no borders on any child elements within dropdowns */
+#main-nav [role="menu"] * {
+    border: none !important;
+}

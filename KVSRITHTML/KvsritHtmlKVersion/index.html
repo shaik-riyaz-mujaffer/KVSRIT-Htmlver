@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KVSRIT | Dr. K.V. Subba Reddy Institute of Technology</title>
+
+    <!-- Converted CSS (Tailwind to pure CSS) -->
+    <link rel="stylesheet" href="css/core.css">
+
+    <!-- Navbar Enhanced Styling -->
+    <link rel="stylesheet" href="css/navbar-enhanced.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+
+    <!-- Lucide Icons -->
+
+
+    <!-- News Section CSS -->
+    <link rel="stylesheet" href="assets/css/news-section.css">
+
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+
+    <!-- Loader CSS -->
+    <link rel="stylesheet" href="assets/components/loader/loader.css">
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- ============================================
+         FUTURISTIC LOADING SCREEN
+         ============================================ -->
+    <div class="loader-overlay" id="loader-overlay">
+        <div class="loader-container">
+            <!-- Floating Particles -->
+            <div class="loader-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <!-- Main Loader Circle (Black Circle) -->
+            <div class="loader-circle">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="KVSRIT Logo" class="college-logo">
+                </div>
+
+                <!-- Rotating Rings -->
+                <div class="loader-ring-outer"></div>
+                <div class="loader-ring-middle"></div>
+                <div class="loader-ring-inner"></div>
+            </div>
+
+            <!-- Upper Core (Small 'K' circle) -->
+            <div class="loader-core"></div>
+
+            <!-- Loading Text -->
+            <div class="loader-text">
+                <div class="loader-title">KVSRIT</div>
+                <h2 id="quote"></h2>
+                <div class="loader-subtitle">Loading College Portal...</div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar">
+                    <div class="loader-progress-fill" id="loader-progress-fill"></div>
+                </div>
+                <div class="loader-percentage" id="loader-percentage">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- News Ticker -->
+        <div class="bg-blue-50 py-3 overflow-hidden border-b border-blue-100">
+            <div class="max-w-7xl mx-auto px-4 flex items-center">
+                <div
+                    class="bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mr-4 z-10 whitespace-nowrap">
+                    Latest News</div>
+                <div class="animate-marquee whitespace-nowrap text-sm font-medium text-blue-900 italic">
+                    • Admissions Open for 2024-25 • NAAC A+ Accredited Institution • Highest Placement Package of 15 LPA
+                    • Last date for application extended to March 31st •
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section (Carousel/Interactive) -->
+        <section class="relative h-[650px] overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="images/hero/hero-1.png" alt="Campus" class="w-full h-full object-cover">
+                <div class="absolute inset-0 gradient-overlay"></div>
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 h-full flex items-center">
+                <div class="max-w-2xl text-white space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs font-bold uppercase tracking-widest text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg> Accredited by NAAC A+ Grade
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                        Shape Your <span class="text-blue-400">Future</span> With Excellence
+                    </h1>
+                    <p class="text-lg text-blue-100/80 leading-relaxed">
+                        Join KVSRIT to experience world-class engineering education with state-of-the-art infrastructure
+                        and top-tier industry placements.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="admissions.html"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:-translate-y-1 text-center">Start
+                            Admission</a>
+                        <a href="about.html"
+                            class="glass hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold transition-all text-center">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Floating bar -->
+            <div class="absolute bottom-0 left-0 w-full glass py-8 border-t-0 border-x-0 hidden md:block">
+                <div class="max-w-7xl mx-auto px-4 grid grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-extrabold text-white">15+</div>
+                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Years of Excellence</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-extrabold text-white">4500+</div>
+                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Graduated Students</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-extrabold text-white">95%</div>
+                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Placement Record</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-extrabold text-white">12+</div>
+                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Industry Labs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Latest News & Updates Section -->
+        <section class="news-section" id="news-updates">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">Latest News & Updates</h2>
+                    <p class="section-subtitle">Stay informed about the latest happenings at KVSRIT</p>
+                </div>
+
+                <!-- News Content Grid -->
+                <div class="news-grid">
+                    <!-- Left Side: Scrolling News Text -->
+                    <div class="news-text-container">
+                        <div class="news-header">
+                            <h3>📰 Recent Announcements</h3>
+                        </div>
+                        <div class="news-scroll-wrapper">
+                            <div class="news-scroll-content" id="newsScrollContent">
+                                <!-- News Item 1 -->
+                                <div class="news-item">
+                                    <div class="news-badge">New</div>
+                                    <h4 class="news-title">Admissions Open for 2024-25</h4>
+                                    <p class="news-date">📅 January 25, 2026</p>
+                                    <p class="news-description">Applications are now open for B.Tech, M.Tech, and MBA
+                                        programs. Last date to apply is March 31st, 2026.</p>
+                                    <a href="#" class="news-link">Read more →</a>
+                                </div>
+
+                                <!-- News Item 2 -->
+                                <div class="news-item">
+                                    <div class="news-badge important">Important</div>
+                                    <h4 class="news-title">NAAC A+ Accreditation Achieved</h4>
+                                    <p class="news-date">📅 January 20, 2026</p>
+                                    <p class="news-description">KVSRIT has been awarded NAAC A+ grade, recognizing our
+                                        commitment to academic excellence and quality education.</p>
+                                    <a href="#" class="news-link">Read more →</a>
+                                </div>
+
+                                <!-- News Item 3 -->
+                                <div class="news-item">
+                                    <h4 class="news-title">Highest Placement Package of 15 LPA</h4>
+                                    <p class="news-date">📅 January 15, 2026</p>
+                                    <p class="news-description">Our students secured excellent placement offers with the
+                                        highest package reaching 15 LPA from top tech companies.</p>
+                                    <a href="#" class="news-link">Read more →</a>
+                                </div>
+
+                                <!-- News Item 4 -->
+                                <div class="news-item">
+                                    <h4 class="news-title">Technical Symposium 2026 Announced</h4>
+                                    <p class="news-date">📅 January 10, 2026</p>
+                                    <p class="news-description">Annual technical symposium scheduled for February 15-16,
+                                        2026. Students from across the state are invited to participate.</p>
+                                    <a href="#" class="news-link">Read more →</a>
+                                </div>
+
+                                <!-- News Item 5 -->
+                                <div class="news-item">
+                                    <h4 class="news-title">New Research Lab Inaugurated</h4>
+                                    <p class="news-date">📅 January 5, 2026</p>
+                                    <p class="news-description">State-of-the-art AI & Machine Learning research lab
+                                        inaugurated with advanced computing facilities.</p>
+                                    <a href="#" class="news-link">Read more →</a>
+                                </div>
+
+                                <!-- News Item 6 -->
+                                <div class="news-item">
+                                    <h4 class="news-title">Industry Expert Lecture Series</h4>
+                                    <p class="news-date">📅 December 28, 2025</p>
+                                    <p class="news-description">Monthly lecture series featuring industry experts from
+                                        leading tech companies begins next month.</p>
+                                    <a href="#" class="news-link">Read more →</a>
+                                </div>
+
+                                <!-- News Item 7 -->
+                                <div class="news-item">
+                                    <h4 class="news-title">Sports Meet 2026 Registration Open</h4>
+                                    <p class="news-date">📅 December 20, 2025</p>
+                                    <p class="news-description">Inter-departmental sports meet registration is now open.
+                                        Register before January 31st, 2026.</p>
+                                    <a href="#" class="news-link">Read more →</a>
+                                </div>
+
+                                <!-- News Item 8 -->
+                                <div class="news-item">
+                                    <h4 class="news-title">Scholarship Applications Extended</h4>
+                                    <p class="news-date">📅 December 15, 2025</p>
+                                    <p class="news-description">Merit-based scholarship application deadline extended to
+                                        February 15th, 2026.</p>
+                                    <a href="#" class="news-link">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Scrolling Images -->
+                    <div class="news-images-container">
+                        <div class="news-header">
+                            <h3>🎓 Events & Highlights</h3>
+                        </div>
+                        <div class="image-carousel-wrapper">
+                            <div class="image-carousel" id="imageCarousel">
+                                <!-- Event Image 1 -->
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=800&fit=crop"
+                                            alt="Convocation Ceremony 2025">
+                                        <div class="image-overlay">
+                                            <h4>Convocation Ceremony 2025</h4>
+                                            <p>Celebrating our graduates' success</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event Image 2 -->
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1200&h=800&fit=crop"
+                                            alt="Technical Symposium">
+                                        <div class="image-overlay">
+                                            <h4>Technical Symposium 2025</h4>
+                                            <p>Innovation and technology showcase</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event Image 3 -->
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=800&fit=crop"
+                                            alt="Placement Drive">
+                                        <div class="image-overlay">
+                                            <h4>Campus Placement Drive</h4>
+                                            <p>Top companies recruiting our students</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event Image 4 -->
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=800&fit=crop"
+                                            alt="Cultural Festival">
+                                        <div class="image-overlay">
+                                            <h4>Annual Cultural Festival</h4>
+                                            <p>Celebrating diversity and talent</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event Image 5 -->
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=800&fit=crop"
+                                            alt="Sports Meet">
+                                        <div class="image-overlay">
+                                            <h4>Inter-College Sports Meet</h4>
+                                            <p>Champions in action</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event Image 6 -->
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop"
+                                            alt="Industry Workshop">
+                                        <div class="image-overlay">
+                                            <h4>Industry Expert Workshop</h4>
+                                            <p>Learning from the best</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Navigation -->
+                            <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">‹</button>
+                            <button class="carousel-btn next" id="nextBtn" aria-label="Next">›</button>
+
+                            <!-- Carousel Indicators -->
+                            <div class="carousel-indicators" id="carouselIndicators"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose KVSRIT -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Why DrKVSRIT</h2>
+                    <h3 class="text-4xl font-extrabold text-gray-900 leading-tight">Pioneering Education for Tomorrow's
+                        Leaders</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all group border border-gray-100">
+                        <div
+                            class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-7 h-7 text-blue-600 group-hover:text-white">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Credentials</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">NBA & NAAC Accredited with A+ Grade. Ranked
+                            among Top 100 in Higher Education Review.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all group border border-gray-100">
+                        <div
+                            class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-emerald-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-7 h-7 text-emerald-600 group-hover:text-white">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 1-4 4v14a3 3 0 0 0 3-3h7z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Teaching Excellence</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Joyful journey of learning with JNTUA
+                            curriculum and innovative industry-ready process.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all group border border-gray-100">
+                        <div
+                            class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-amber-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-7 h-7 text-amber-600 group-hover:text-white">
+                                <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Placements</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Series of training programs bridging the gap
+                            between campus and global industrial requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs (Modern Flat Card Style) -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Undergraduate</h2>
+                        <h3 class="text-4xl font-extrabold text-gray-900">Featured Programs</h3>
+                    </div>
+                    <a href="courses\index.html"
+                        class="text-blue-600 font-bold flex items-center gap-2 hover:gap-4 transition-all">View All
+                        Courses <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="w-5 h-5">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg></a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- CSE (AI & ML) -->
+                    <a href="departments/ai/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300">
+                                <path
+                                    d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                                <path
+                                    d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                                <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                                <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
+                                <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+                                <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+                                <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
+                                <path d="M6 18a4 4 0 0 1-1.938-1.5" />
+                                <path d="M19.938 16.5A4 4 0 0 1 18 18" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">CSE
+                                (AI & ML)</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
+                        </div>
+                    </a>
+
+                    <!-- Computer Science -->
+                    <a href="departments/cse/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-indigo-50 flex items-center justify-center group-hover:bg-indigo-600 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-indigo-600 group-hover:text-white transition-colors duration-300">
+                                <path d="m18 16 4-4-4-4" />
+                                <path d="m6 8-4 4 4 4" />
+                                <path d="m14.5 4-5 16" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                                Computer Science</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
+                        </div>
+                    </a>
+
+                    <!-- Electronics (ECE) -->
+                    <a href="departments/ece/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-emerald-50 flex items-center justify-center group-hover:bg-emerald-600 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-emerald-600 group-hover:text-white transition-colors duration-300">
+                                <rect width="16" height="16" x="4" y="4" rx="2" />
+                                <rect width="6" height="6" x="9" y="9" rx="1" />
+                                <path d="M15 2v2" />
+                                <path d="M15 20v2" />
+                                <path d="M2 15h2" />
+                                <path d="M2 9h2" />
+                                <path d="M20 15h2" />
+                                <path d="M20 9h2" />
+                                <path d="M9 2v2" />
+                                <path d="M9 20v2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                                Electronics (ECE)</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
+                        </div>
+                    </a>
+
+                    <!-- Electrical (EEE) -->
+                    <a href="departments/eee/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-600 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-amber-600 group-hover:text-white transition-colors duration-300">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-amber-600 transition-colors">
+                                Electrical (EEE)</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
+                        </div>
+                    </a>
+
+                    <!-- Civil (CE) -->
+                    <a href="departments/ce/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-orange-50 flex items-center justify-center group-hover:bg-orange-600 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-orange-600 group-hover:text-white transition-colors duration-300">
+                                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+                                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+                                <path d="M10 6h4" />
+                                <path d="M10 10h4" />
+                                <path d="M10 14h4" />
+                                <path d="M10 18h4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                                Civil (CE)</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
+                        </div>
+                    </a>
+
+                    <!-- Data Science (DS) -->
+                    <a href="departments/ds/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-cyan-50 flex items-center justify-center group-hover:bg-cyan-600 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-cyan-600 group-hover:text-white transition-colors duration-300">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                                <path d="M3 12A9 3 0 0 0 21 12" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-cyan-600 transition-colors">Data
+                                Science (DS)</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
+                        </div>
+                    </a>
+
+                    <!-- Mechanical (ME) -->
+                    <a href="departments/me/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-red-50 flex items-center justify-center group-hover:bg-red-600 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-red-600 group-hover:text-white transition-colors duration-300">
+                                <path
+                                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+                                Mechanical (ME)</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
+                        </div>
+                    </a>
+
+                    <!-- Artificial Intelligence (AI) -->
+                    <a href="departments/ai-only/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-violet-600 group-hover:text-white transition-colors duration-300">
+                                <path
+                                    d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                                <path
+                                    d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                                <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                                <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
+                                <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+                                <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+                                <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
+                                <path d="M6 18a4 4 0 0 1-1.938-1.5" />
+                                <path d="M19.938 16.5A4 4 0 0 1 18 18" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-violet-600 transition-colors">
+                                Artificial Intelligence (AI)</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Widget -->
+        <button class="chat-widget-toggle" id="chatToggle" aria-label="Open Chat">
+            <img src="assets/images/chatbot/kvsrit-bot-detailed.jpg" alt="Chat Bot" class="chat-toggle-icon">
+        </button>
+
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-bot-avatar">
+                        <img src="assets/images/chatbot/kvsrit-bot-detailed.jpg" alt="Bot Avatar">
+                    </div>
+                    <div>
+                        <div class="chat-bot-name">KVSRIT Help Bot</div>
+                        <div class="chat-bot-status">● Online</div>
+                    </div>
+                </div>
+                <button class="chat-close-btn" id="chatClose">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 18 18" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will appear here -->
+                <div class="typing-indicator" id="typingIndicator">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="quick-replies" id="quickReplies">
+                <button class="quick-reply-btn">Admissions</button>
+                <button class="quick-reply-btn">Courses</button>
+                <button class="quick-reply-btn">Fees</button>
+                <button class="quick-reply-btn">Placements</button>
+            </div>
+
+            <form class="chat-input-area" id="chatForm">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..." autocomplete="off">
+                <button type="submit" class="chat-send-btn" id="chatSend" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m22 2-7 20-4-9-9-4Z" />
+                        <path d="M22 2 11 13" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="assets/components/loader/loader.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/news-section.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+
+</body>
+
+</html>

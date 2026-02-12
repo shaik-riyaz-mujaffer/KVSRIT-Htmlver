@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | KVSRIT</title>
+    <meta name="description"
+        content="Stay updated with the latest happenings, workshops, cultural fests, and technical events at KVSRIT.">
+
+    <!-- Converted CSS (Tailwind to pure CSS) -->
+    <link rel="stylesheet" href="../css/core.css">
+
+    <!-- Navbar Enhanced Styling -->
+    <link rel="stylesheet" href="../css/navbar-enhanced.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .event-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .event-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .featured-event {
+            position: relative;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            min-height: 400px;
+        }
+
+        .featured-event .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4), transparent);
+        }
+
+        .category-tab {
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 2px solid #e5e7eb;
+            background: white;
+            color: #374151;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-tab:hover {
+            border-color: #f59e0b;
+            color: #d97706;
+        }
+
+        .category-tab.active {
+            border-color: #f59e0b;
+            background: #f59e0b;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="min-h-screen">
+            <!-- Hero Section -->
+            <div class="relative text-white py-24 overflow-hidden"
+                style="background: linear-gradient(to bottom right, #1e3a8a, #7c2d12, #1e40af);">
+                <div class="absolute inset-0 opacity-20">
+                    <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full"
+                        style="background: #f59e0b; filter: blur(128px);"></div>
+                    <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full"
+                        style="background: #3b82f6; filter: blur(128px);"></div>
+                </div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur text-sm font-medium mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4 text-yellow-400">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                            <line x1="16" x2="16" y1="2" y2="6" />
+                            <line x1="8" x2="8" y1="2" y2="6" />
+                            <line x1="3" x2="21" y1="10" y2="10" />
+                        </svg>
+                        Happenings & Celebrations
+                    </span>
+                    <h1 class="text-5xl font-bold mb-6">
+                        Campus <span
+                            style="background: linear-gradient(to right, #fbbf24, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Events</span>
+                    </h1>
+                    <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                        From tech fests to cultural celebrations — experience unforgettable moments throughout the
+                        academic year.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Featured Events -->
+            <section class="py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <span
+                            class="inline-block px-4 py-2 rounded-full bg-amber-100 text-amber-700 text-sm font-semibold mb-4">
+                            Highlights
+                        </span>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                            Featured <span
+                                style="background: linear-gradient(to right, #d97706, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Events</span>
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Our signature events that define the KVSRIT experience.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-8" style="grid-template-columns: repeat(2, 1fr);">
+                        <!-- Featured Event 1 -->
+                        <div class="featured-event"
+                            style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); grid-row: span 2;">
+                            <div class="absolute inset-0 flex items-center justify-center" style="opacity: 0.15;">
+                                <span style="font-size: 12rem;">🎉</span>
+                            </div>
+                            <div class="content">
+                                <span class="event-badge mb-3"
+                                    style="background: #3b82f6; color: white;">Technical</span>
+                                <h3 class="text-2xl font-bold text-white mb-2">Annual Tech Fest — TechVista 2025</h3>
+                                <p class="text-gray-300 mb-4">The biggest technical extravaganza featuring robotics,
+                                    coding competitions, hackathons, innovation showcases, and industry expert talks.
+                                </p>
+                                <div class="flex items-center gap-4 text-sm text-gray-400">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        February 2025
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                        Main Campus
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Event 2 -->
+                        <div class="featured-event" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
+                            <div class="absolute inset-0 flex items-center justify-center" style="opacity: 0.15;">
+                                <span style="font-size: 8rem;">🎭</span>
+                            </div>
+                            <div class="content">
+                                <span class="event-badge mb-3"
+                                    style="background: #ec4899; color: white;">Cultural</span>
+                                <h3 class="text-xl font-bold text-white mb-2">Cultural Fest — Utsav 2025</h3>
+                                <p class="text-gray-300 text-sm">Art, music, dance, and drama from across the state.</p>
+                                <div class="flex items-center gap-4 text-sm text-gray-400 mt-3">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        March 2025
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Event 3 -->
+                        <div class="featured-event" style="background: linear-gradient(135deg, #10b981, #059669);">
+                            <div class="absolute inset-0 flex items-center justify-center" style="opacity: 0.15;">
+                                <span style="font-size: 8rem;">🏆</span>
+                            </div>
+                            <div class="content">
+                                <span class="event-badge mb-3" style="background: #10b981; color: white;">Sports</span>
+                                <h3 class="text-xl font-bold text-white mb-2">Sports Week — Olympiad 2025</h3>
+                                <p class="text-gray-300 text-sm">Inter-college tournaments in cricket, football,
+                                    basketball, and athletics.</p>
+                                <div class="flex items-center gap-4 text-sm text-gray-400 mt-3">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        January 2025
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Events -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <span
+                            class="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4">
+                            Calendar
+                        </span>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                            Upcoming <span
+                                style="background: linear-gradient(to right, #2563eb, #4f46e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Events</span>
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Mark your calendars for these exciting upcoming events.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-6" style="grid-template-columns: repeat(3, 1fr);">
+                        <!-- Event Card 1 -->
+                        <div class="event-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                            <div class="h-48 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, #dbeafe, #e0e7ff);">
+                                <span style="font-size: 4rem;">💡</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="event-badge mb-3"
+                                    style="background: #dbeafe; color: #1d4ed8;">Workshop</span>
+                                <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">AI & Machine Learning Workshop
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-4">A hands-on workshop on building AI/ML models with
+                                    Python and TensorFlow by industry experts.</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        Mar 15, 2025
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        9:00 AM
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 2 -->
+                        <div class="event-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                            <div class="h-48 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
+                                <span style="font-size: 4rem;">🔬</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="event-badge mb-3"
+                                    style="background: #fef3c7; color: #92400e;">Seminar</span>
+                                <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">National Science Seminar</h3>
+                                <p class="text-gray-600 text-sm mb-4">Research paper presentations and panel discussions
+                                    on emerging technologies in engineering.</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        Mar 28, 2025
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        10:00 AM
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 3 -->
+                        <div class="event-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                            <div class="h-48 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, #fce7f3, #fbcfe8);">
+                                <span style="font-size: 4rem;">🎨</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="event-badge mb-3"
+                                    style="background: #fce7f3; color: #9d174d;">Competition</span>
+                                <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">Inter-College Hackathon</h3>
+                                <p class="text-gray-600 text-sm mb-4">24-hour hackathon challenging students to build
+                                    innovative solutions for real-world problems.</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        Apr 5-6, 2025
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        24 Hours
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 4 -->
+                        <div class="event-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                            <div class="h-48 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">
+                                <span style="font-size: 4rem;">🌱</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="event-badge mb-3"
+                                    style="background: #d1fae5; color: #065f46;">Awareness</span>
+                                <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">Green Campus Initiative</h3>
+                                <p class="text-gray-600 text-sm mb-4">Tree plantation drive and sustainability awareness
+                                    campaign across the campus.</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        Apr 22, 2025
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        8:00 AM
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 5 -->
+                        <div class="event-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                            <div class="h-48 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, #ede9fe, #ddd6fe);">
+                                <span style="font-size: 4rem;">🎓</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="event-badge mb-3" style="background: #ede9fe; color: #5b21b6;">Guest
+                                    Lecture</span>
+                                <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">Industry Leaders Talk Series</h3>
+                                <p class="text-gray-600 text-sm mb-4">Monthly lecture series featuring prominent
+                                    industry professionals sharing insights and career guidance.</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        Monthly
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        2:00 PM
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 6 -->
+                        <div class="event-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                            <div class="h-48 flex items-center justify-center"
+                                style="background: linear-gradient(135deg, #fee2e2, #fecaca);">
+                                <span style="font-size: 4rem;">🏅</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="event-badge mb-3"
+                                    style="background: #fee2e2; color: #991b1b;">Annual</span>
+                                <h3 class="text-lg font-bold text-gray-900 mt-2 mb-2">Annual Day Celebrations</h3>
+                                <p class="text-gray-600 text-sm mb-4">Grand celebration featuring academic excellence
+                                    awards, cultural performances, and alumni reunion.</p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                        May 10, 2025
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        Whole Day
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-20" style="background: linear-gradient(to bottom right, #1e3a8a, #7c2d12, #1e40af);">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-4xl font-bold text-white mb-6">Want to Be Part of the Action?</h2>
+                    <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+                        Join KVSRIT and be a part of an exciting campus life filled with innovation, creativity, and
+                        growth.
+                    </p>
+                    <a href="../admissions.html"
+                        class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-blue-900 font-bold hover:shadow-lg transition-all">
+                        Apply Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script>window.rootPath = '../';</script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+</body>
+
+</html>

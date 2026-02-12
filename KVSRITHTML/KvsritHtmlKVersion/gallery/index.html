@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | KVSRIT</title>
+    <meta name="description"
+        content="Explore the vibrant campus life at KVSRIT through our photo gallery - campus views, events, labs, sports, and cultural activities.">
+
+    <!-- Converted CSS (Tailwind to pure CSS) -->
+    <link rel="stylesheet" href="../css/core.css">
+
+    <!-- Navbar Enhanced Styling -->
+    <link rel="stylesheet" href="../css/navbar-enhanced.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 2px solid #e5e7eb;
+            background: white;
+            color: #374151;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: #3b82f6;
+            color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .filter-btn.active {
+            border-color: #2563eb;
+            background: #2563eb;
+            color: white;
+        }
+
+        .gallery-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item img,
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img,
+        .gallery-item:hover .gallery-placeholder {
+            transform: scale(1.05);
+        }
+
+        .gallery-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            grid-auto-rows: 200px;
+        }
+
+        .masonry-grid .tall {
+            grid-row: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .masonry-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .masonry-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="min-h-screen">
+            <!-- Hero Section -->
+            <div class="relative text-white py-24 overflow-hidden"
+                style="background: linear-gradient(to bottom right, #581c87, #312e81, #1e3a8a);">
+                <div class="absolute inset-0 opacity-20">
+                    <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full"
+                        style="background: #a855f7; filter: blur(128px);"></div>
+                    <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full"
+                        style="background: #3b82f6; filter: blur(128px);"></div>
+                </div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur text-sm font-medium mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4 text-yellow-400">
+                            <path
+                                d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                            <circle cx="12" cy="13" r="3" />
+                        </svg>
+                        Visual Journey
+                    </span>
+                    <h1 class="text-5xl font-bold mb-6">
+                        Campus <span
+                            style="background: linear-gradient(to right, #c084fc, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Gallery</span>
+                    </h1>
+                    <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                        A glimpse into the vibrant campus life, world-class facilities, and memorable moments at KVSRIT.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Filter & Gallery -->
+            <section class="py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="campus">Campus</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                        <button class="filter-btn" data-filter="labs">Labs</button>
+                        <button class="filter-btn" data-filter="sports">Sports</button>
+                        <button class="filter-btn" data-filter="cultural">Cultural</button>
+                    </div>
+
+                    <!-- Admin / Add Image Section (Visible for Demo) -->
+                    <div class="mb-12 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="text-pink-600">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <circle cx="8.5" cy="8.5" r="1.5" />
+                                <polyline points="21 15 16 10 5 21" />
+                            </svg>
+                            Add New Image (File Upload Demo)
+                        </h3>
+                        <div class="grid md:grid-cols-4 gap-4">
+                            <!-- Helper Text or Label could be added here -->
+                            <div class="col-span-2 relative">
+                                <input type="file" id="img-file" accept="image/*"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-pink-50 file:text-pink-700 hover:file:bg-pink-100">
+                            </div>
+                            <input type="text" id="img-title" placeholder="Title (e.g., Annual Day)"
+                                class="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            <select id="img-category"
+                                class="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 bg-white">
+                                <option value="campus">Campus</option>
+                                <option value="events">Events</option>
+                                <option value="labs">Labs</option>
+                                <option value="sports">Sports</option>
+                                <option value="cultural">Cultural</option>
+                            </select>
+                        </div>
+                        <div class="mt-4 flex justify-end items-center gap-4">
+                            <input type="password" id="auth-pin" placeholder="PIN" maxlength="4"
+                                class="w-24 px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 text-center tracking-widest placeholder:tracking-normal font-bold">
+                            <button id="add-img-btn"
+                                class="px-6 py-2 bg-pink-600 text-white font-bold rounded-lg hover:bg-pink-700 transition-colors shadow-lg flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                                Add Image
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2 text-right italic">* images are saved to your browser's
+                            local storage for this demo</p>
+                    </div>
+
+                    <!-- Gallery Grid -->
+                    <div class="masonry-grid" id="gallery-grid">
+                        <!-- Items will be injected here by JS -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script>window.rootPath = '../';</script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+
+    <!-- Gallery Data -->
+    <script src="../assets/js/gallery-data.js"></script>
+
+    <!-- Gallery Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('gallery-grid');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const addBtn = document.getElementById('add-img-btn');
+
+            // 1. Load Data (Merge default + LocalStorage)
+            function loadGallery() {
+                const stored = JSON.parse(localStorage.getItem('myGalleryData')) || [];
+                // Combine default data with user-added data
+                return [...galleryData, ...stored];
+            }
+
+            // 2. Render Grid
+            function renderGallery(items, filter = 'all') {
+                grid.innerHTML = '';
+
+                items.forEach(item => {
+                    // Filter Logic
+                    if (filter !== 'all' && item.category !== filter) return;
+
+                    const el = document.createElement('div');
+                    el.className = `gallery-item ${item.size === 'tall' ? 'tall' : ''} group relative overflow-hidden rounded-2xl cursor-pointer`;
+                    el.setAttribute('data-category', item.category);
+
+                    // Simple placeholder logic if image fails (using the SVG from before or just gradient)
+                    // For now, we use a clean image tag with fallback background
+                    el.innerHTML = `
+                        <div class="w-full h-full bg-gray-200 relative">
+                             <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.style.display='none'; this.parentElement.style.background='${item.placeholderGradient}'">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-pink-400 mb-1 block">${item.category}</span>
+                                    <h4 class="font-bold text-lg">${item.title}</h4>
+                                </div>
+                             </div>
+                        </div>
+                    `;
+                    grid.appendChild(el);
+
+                    // Animation entrance
+                    el.animate([
+                        { opacity: 0, transform: 'scale(0.95)' },
+                        { opacity: 1, transform: 'scale(1)' }
+                    ], { duration: 400, fill: 'forwards', easing: 'ease-out' });
+                });
+            }
+
+            // Initial Render
+            let currentData = loadGallery();
+            renderGallery(currentData);
+
+            // 3. Filter Event Listeners
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter');
+                    renderGallery(currentData, filter);
+                });
+            });
+
+            // 4. Add Image Logic (File API + PIN Protection)
+            addBtn.addEventListener('click', () => {
+                const fileInput = document.getElementById('img-file');
+                const title = document.getElementById('img-title').value.trim();
+                const category = document.getElementById('img-category').value;
+                const pinInput = document.getElementById('auth-pin'); // Authenticate
+                const file = fileInput.files[0];
+
+                // 1. PIN Check
+                if (pinInput.value.trim() !== '9989') {
+                    alert('Incorrect PIN! Authorization failed.');
+                    pinInput.value = ''; // Clear wrong pin
+                    pinInput.focus();
+                    return;
+                }
+
+                if (!file || !title) {
+                    alert('Please select an image file and enter a title.');
+                    return;
+                }
+
+                // Check file size (optional, e.g., limit to 2MB to avoid LocalStorage quota issues)
+                if (file.size > 2 * 1024 * 1024) {
+                    alert('File is too large! Please select an image under 2MB.');
+                    return;
+                }
+
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const base64String = e.target.result;
+
+                    const newItem = {
+                        category,
+                        title,
+                        type: 'image',
+                        src: base64String, // Base64 data URL
+                        placeholderGradient: 'linear-gradient(135deg, #1e40af, #7c3aed)',
+                        size: 'normal'
+                    };
+
+                    // Save to LocalStorage
+                    try {
+                        const existing = JSON.parse(localStorage.getItem('myGalleryData')) || [];
+                        existing.push(newItem);
+                        localStorage.setItem('myGalleryData', JSON.stringify(existing));
+
+                        // Reload and Render
+                        currentData = loadGallery();
+                        renderGallery(currentData, category);
+
+                        // Switch filter to show new item
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        document.querySelector(`[data-filter="${category}"]`).classList.add('active');
+
+                        // Clear inputs
+                        fileInput.value = '';
+                        document.getElementById('img-title').value = '';
+                        pinInput.value = ''; // Clear PIN for security after success
+
+                        alert('Image added successfully!');
+                    } catch (error) {
+                        console.error(error);
+                        alert('Storage limit exceeded or error saving.');
+                    }
+                };
+
+                reader.onerror = function () {
+                    alert('Failed to read file!');
+                };
+
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+</body>
+
+</html>

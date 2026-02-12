@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - KVSRIT</title>
+    <meta name="description" content="Administrative login and resources for KVSRIT staff and faculty.">
+    <!-- Converted CSS (Tailwind to pure CSS) -->
+    <link rel="stylesheet" href="../css/core.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar-enhanced.css">
+
+    <!-- Lucide Icons -->
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header Injected Here -->
+        <div id="navbar-placeholder"></div>
+
+        <main>
+            <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+                <div
+                    class="bg-white rounded-2xl shadow-xl w-full max-w-4xl overflow-hidden flex flex-col md:flex-row min-h-[500px]">
+
+                    <!-- Left Side: Login -->
+                    <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-2">Admin Login</h2>
+                            <p class="text-gray-500">Welcome back. Please login to your account.</p>
+                        </div>
+
+                        <form
+                            onsubmit="event.preventDefault(); alert('This is a static demo. Admin login functionality requires a backend.');">
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Username / Staff
+                                        ID</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-5 w-5 text-gray-400">
+                                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                                <circle cx="12" cy="7" r="4" />
+                                            </svg>
+                                        </div>
+                                        <input type="text"
+                                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                            placeholder="Enter ID">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-5 w-5 text-gray-400">
+                                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                            </svg>
+                                        </div>
+                                        <input type="password"
+                                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                            placeholder="Enter Password">
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <input id="remember-me" name="remember-me" type="checkbox"
+                                            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                        <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember
+                                            me</label>
+                                    </div>
+
+                                    <div class="text-sm">
+                                        <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Forgot
+                                            password?</a>
+                                    </div>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                    Sign in
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="mt-6 text-center text-xs text-gray-500">
+                            <p>Protected by reCAPTCHA and subject to the Google Privacy Policy and Terms of Service.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Info/Decoration -->
+                    <div class="hidden md:block w-1/2 bg-blue-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-800"></div>
+                        <div class="relative h-full flex flex-col justify-center p-12 text-white">
+                            <h3 class="text-2xl font-bold mb-4">Staff Resources</h3>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                    </div>
+                                    <span>Faculty Management</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                                            <path d="M14 2v4h4" />
+                                            <path d="M10 9H8" />
+                                            <path d="M16 13H8" />
+                                            <path d="M16 17H8" />
+                                        </svg>
+                                    </div>
+                                    <span>Exam Cell Portal</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                            <line x1="12" x2="12" y1="20" y2="10" />
+                                            <line x1="18" x2="18" y1="20" y2="4" />
+                                            <line x1="6" x2="6" y1="20" y2="16" />
+                                        </svg>
+                                    </div>
+                                    <span>Attendance Reports</span>
+                                </li>
+                            </ul>
+                            <a href="index.html"
+                                class="inline-flex items-center text-blue-100 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="w-4 h-4 mr-2">
+                                    <path d="m12 19-7-7 7-7" />
+                                    <path d="M19 12H5" />
+                                </svg> Back to Annual Website
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- No Footer needed for logic login page typically, but sticking to consistency -->
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script>window.rootPath = '../';</script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

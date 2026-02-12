@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | KVSRIT</title>
+    <meta name="description"
+        content="Explore the vibrant campus life at KVSRIT through our photo gallery - campus views, events, labs, sports, and cultural activities.">
+
+    <!-- Converted CSS (Tailwind to pure CSS) -->
+    <link rel="stylesheet" href="../css/core.css">
+
+    <!-- Navbar Enhanced Styling -->
+    <link rel="stylesheet" href="../css/navbar-enhanced.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 2px solid #e5e7eb;
+            background: white;
+            color: #374151;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: #3b82f6;
+            color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .filter-btn.active {
+            border-color: #2563eb;
+            background: #2563eb;
+            color: white;
+        }
+
+        .gallery-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item img,
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img,
+        .gallery-item:hover .gallery-placeholder {
+            transform: scale(1.05);
+        }
+
+        .gallery-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            grid-auto-rows: 200px;
+        }
+
+        .masonry-grid .tall {
+            grid-row: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .masonry-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .masonry-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="min-h-screen">
+            <!-- Hero Section -->
+            <div class="relative text-white py-24 overflow-hidden"
+                style="background: linear-gradient(to bottom right, #581c87, #312e81, #1e3a8a);">
+                <div class="absolute inset-0 opacity-20">
+                    <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full"
+                        style="background: #a855f7; filter: blur(128px);"></div>
+                    <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full"
+                        style="background: #3b82f6; filter: blur(128px);"></div>
+                </div>
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur text-sm font-medium mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4 text-yellow-400">
+                            <path
+                                d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                            <circle cx="12" cy="13" r="3" />
+                        </svg>
+                        Visual Journey
+                    </span>
+                    <h1 class="text-5xl font-bold mb-6">
+                        Campus <span
+                            style="background: linear-gradient(to right, #c084fc, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Gallery</span>
+                    </h1>
+                    <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                        A glimpse into the vibrant campus life, world-class facilities, and memorable moments at KVSRIT.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Filter & Gallery -->
+            <section class="py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="campus">Campus</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                        <button class="filter-btn" data-filter="labs">Labs</button>
+                        <button class="filter-btn" data-filter="sports">Sports</button>
+                        <button class="filter-btn" data-filter="cultural">Cultural</button>
+                    </div>
+
+                    <!-- Gallery Grid -->
+                    <div class="masonry-grid" id="gallery-grid">
+                        <!-- Campus 1 - Tall -->
+                        <div class="gallery-item tall" data-category="campus">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #1e40af, #7c3aed);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Main Building</h4>
+                                    <p class="text-sm text-gray-300">Campus</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Events 1 -->
+                        <div class="gallery-item" data-category="events">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                    <line x1="16" x2="16" y1="2" y2="6" />
+                                    <line x1="8" x2="8" y1="2" y2="6" />
+                                    <line x1="3" x2="21" y1="10" y2="10" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Annual Tech Fest</h4>
+                                    <p class="text-sm text-gray-300">Events</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Labs 1 -->
+                        <div class="gallery-item" data-category="labs">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #10b981, #06b6d4);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <rect width="20" height="14" x="2" y="3" rx="2" />
+                                    <line x1="8" x2="16" y1="21" y2="21" />
+                                    <line x1="12" x2="12" y1="17" y2="21" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Computer Lab</h4>
+                                    <p class="text-sm text-gray-300">Labs</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sports 1 -->
+                        <div class="gallery-item" data-category="sports">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                                    <path d="M4 22h16" />
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Sports Complex</h4>
+                                    <p class="text-sm text-gray-300">Sports</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cultural 1 - Tall -->
+                        <div class="gallery-item tall" data-category="cultural">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <path d="M9 18V5l12-2v13" />
+                                    <circle cx="6" cy="18" r="3" />
+                                    <circle cx="18" cy="16" r="3" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Cultural Fest</h4>
+                                    <p class="text-sm text-gray-300">Cultural</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campus 2 -->
+                        <div class="gallery-item" data-category="campus">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #0ea5e9, #2563eb);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Central Library</h4>
+                                    <p class="text-sm text-gray-300">Campus</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Events 2 -->
+                        <div class="gallery-item" data-category="events">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #a855f7, #6366f1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <path
+                                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Workshop Day</h4>
+                                    <p class="text-sm text-gray-300">Events</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Labs 2 - Tall -->
+                        <div class="gallery-item tall" data-category="labs">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #14b8a6, #0ea5e9);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <path
+                                        d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
+                                    <path d="M8.5 2h7" />
+                                    <path d="M7 16h10" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Electronics Lab</h4>
+                                    <p class="text-sm text-gray-300">Labs</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sports 2 -->
+                        <div class="gallery-item" data-category="sports">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="m4.93 4.93 4.24 4.24" />
+                                    <path d="m14.83 9.17 4.24-4.24" />
+                                    <path d="m14.83 14.83 4.24 4.24" />
+                                    <path d="m9.17 14.83-4.24 4.24" />
+                                    <circle cx="12" cy="12" r="4" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Cricket Ground</h4>
+                                    <p class="text-sm text-gray-300">Sports</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cultural 2 -->
+                        <div class="gallery-item" data-category="cultural">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #f97316, #eab308);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <circle cx="13.5" cy="6.5" r=".5" fill="white" />
+                                    <circle cx="17.5" cy="10.5" r=".5" fill="white" />
+                                    <circle cx="8.5" cy="7.5" r=".5" fill="white" />
+                                    <circle cx="6.5" cy="12.5" r=".5" fill="white" />
+                                    <path
+                                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.91-.05 2.82-.15 2.53-.28 4.1-2.9 3.03-5.22a1.8 1.8 0 0 1 .58-2.38l.68-.42a2.83 2.83 0 0 0 1.22-3.46c-.52-1.9-2.5-3.37-4.83-3.37H12Z" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Art Exhibition</h4>
+                                    <p class="text-sm text-gray-300">Cultural</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campus 3 -->
+                        <div class="gallery-item" data-category="campus">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #6366f1, #a855f7);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <path d="M5 13a10 10 0 0 1 14 0" />
+                                    <path d="M8.5 16.5a5 5 0 0 1 7 0" />
+                                    <path d="M2 8.82a15 15 0 0 1 20 0" />
+                                    <line x1="12" x2="12.01" y1="20" y2="20" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Wi-Fi Campus</h4>
+                                    <p class="text-sm text-gray-300">Campus</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Events 3 -->
+                        <div class="gallery-item" data-category="events">
+                            <div class="gallery-placeholder h-full"
+                                style="background: linear-gradient(135deg, #e11d48, #be185d);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" style="opacity: 0.5;">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <div class="overlay">
+                                <div class="text-white">
+                                    <h4 class="font-bold text-lg">Graduation Ceremony</h4>
+                                    <p class="text-sm text-gray-300">Events</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script>window.rootPath = '../';</script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/components.js"></script>
+
+    <!-- Gallery Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active state
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = '';
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

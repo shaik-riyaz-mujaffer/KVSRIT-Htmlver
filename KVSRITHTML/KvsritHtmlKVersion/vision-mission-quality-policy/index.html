@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision, Mission & Quality Policy | KVSRIT</title>
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../css/core.css">
+
+    <!-- Navbar Enhanced Styling -->
+    <link rel="stylesheet" href="../css/navbar-enhanced.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Page Header Styles */
+        .page-header {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../images/hero/hero-1.png') center/cover;
+            opacity: 0.15;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: '›';
+            margin-left: 0.5rem;
+            opacity: 0.7;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: #60a5fa;
+        }
+
+        .breadcrumb .current {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .vision-mission-content {
+            background: white;
+            border-radius: 1rem;
+            padding: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .vision-mission-content h3 {
+            color: #1e3a8a;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid #2563eb;
+            display: inline-block;
+        }
+
+        .vision-mission-content p {
+            color: #374151;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            text-align: justify;
+        }
+
+        .vision-mission-content ol {
+            color: #374151;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .vision-mission-content ol li {
+            margin-bottom: 1rem;
+        }
+
+        /* Image Container */
+        .quality-policy-image {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .quality-policy-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .vision-mission-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .vision-mission-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .vision-mission-content p,
+            .vision-mission-content ol {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Vision, Mission & Quality Policy</h1>
+                <ul class="breadcrumb">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="current">Vision, Mission & Quality Policy</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="content-container">
+                <div class="vision-mission-content">
+                    <h3>Institute Vision</h3>
+                    <p>To be a Global Leader in imparting Quality Technical Education to produce Competent, Technically
+                        Innovative Engineers imbibed with Research Aptitude, Entrepreneurship and Social Responsibility.
+                    </p>
+
+                    <h3>Institute Mission</h3>
+                    <ol>
+                        <li>To nurture the Students with Fundamental Engineering Knowledge enriched with Technical
+                            Skills.</li>
+                        <li>To create Conducive Environment to nurture Innovation and Interdisciplinary Research.</li>
+                        <li>To develop Professionals through Innovative Pedagogy focusing on Individual Growth,
+                            Discipline, Integrity, Ethics and Social Responsibility.</li>
+                        <li>To foster Industry-Institution Partnerships Leading to Skill Development and
+                            Entrepreneurship.</li>
+                    </ol>
+
+                    <!-- Quality Policy Image -->
+                    <div class="quality-policy-image">
+                        <img src="../assets/images/quality-policy.jpg" alt="Quality Policy"
+                            onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/components.js"></script>
+
+</body>
+
+</html>
