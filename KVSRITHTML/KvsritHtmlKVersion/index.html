@@ -91,13 +91,15 @@
 
     <main>
         <!-- News Ticker -->
-        <div style="background-color:#eff6ff;padding:12px 0;overflow:hidden;border-bottom:1px solid #dbeafe;">
+        <div
+            style="background-color:var(--blue-50);padding:12px 0;overflow:hidden;border-bottom:1px solid var(--blue-100);">
             <div
                 style="display:inline-flex;align-items:center;gap:12px;white-space:nowrap;animation:tickerSlide 18s linear infinite;">
                 <span
-                    style="background:#2563eb;color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:9999px;">Latest
+                    style="background:var(--secondary);color:var(--white);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:9999px;">Latest
                     News</span>
-                <span style="font-size:14px;font-weight:500;color:#1e3a8a;font-style:italic;">• Admissions Open for
+                <span style="font-size:14px;font-weight:500;color:var(--primary);font-style:italic;">• Admissions Open
+                    for
                     2024-25 • NAAC A+ Accredited Institution • Highest Placement Package of 15 LPA • Last date for
                     application extended to March 31st •</span>
             </div>
@@ -261,44 +263,46 @@
                         <div
                             style="display:flex;flex-wrap:nowrap;gap:0;border-bottom:2px solid #e5e7eb;margin-bottom:0;width:100%;">
                             <button class="ann-tab active" data-tab="news-events"
-                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:#2563eb;color:#fff;border:1px solid #d1d5db;border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">News
+                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--secondary);color:var(--white);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">News
                                 & Events</button>
                             <button class="ann-tab" data-tab="examination"
-                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:#f9fafb;color:#374151;border:1px solid #d1d5db;border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Examination</button>
+                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--section);color:var(--text);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Examination</button>
                             <button class="ann-tab" data-tab="placements"
-                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:#f9fafb;color:#374151;border:1px solid #d1d5db;border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Placements</button>
+                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--section);color:var(--text);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Placements</button>
                             <button class="ann-tab" data-tab="admissions"
-                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:#f9fafb;color:#374151;border:1px solid #d1d5db;border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Admissions</button>
+                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--section);color:var(--text);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Admissions</button>
                             <button class="ann-tab" data-tab="forums"
-                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:#f9fafb;color:#374151;border:1px solid #d1d5db;border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Forum
+                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--section);color:var(--text);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Forum
                                 Activities</button>
                         </div>
 
                         <!-- Tab Content Panels -->
-                        <div style="border:1px solid #d1d5db;border-top:none;background:#fff;height:420px;overflow:hidden;position:relative;"
+                        <div style="border:1px solid var(--border);border-top:none;background:var(--white);height:420px;overflow:hidden;position:relative;"
                             id="annTabContent">
 
                             <!-- News & Events Tab -->
                             <div class="ann-panel active" id="panel-news-events" style="height:100%;overflow:hidden;">
-                                <div style="padding:14px 20px;border-bottom:1px solid #e5e7eb;background:#f0f4ff;">
-                                    <h4 style="font-size:15px;font-weight:700;color:#1e3a8a;margin:0;">Student Forms /
+                                <div
+                                    style="padding:14px 20px;border-bottom:1px solid var(--border);background:var(--blue-50);">
+                                    <h4 style="font-size:15px;font-weight:700;color:var(--primary);margin:0;">Student
+                                        Forms /
                                         Club Activities:</h4>
                                 </div>
                                 <div class="ann-scroll-inner" style="transition:transform 0.8s ease;">
                                     <!-- Entry 1 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span style="color:var(--accent);font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">11-02-2026</span>
+                                                style="font-weight:700;color:var(--primary);font-size:14px;">11-02-2026</span>
                                         </div>
                                         <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Ignasa Event
                                             Gallery <a href="#"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                style="color:var(--secondary);font-weight:600;text-decoration:none;">Click
                                                 Here</a></p>
                                     </div>
                                     <!-- Entry 2 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -310,7 +314,7 @@
                                                 Here</a></p>
                                     </div>
                                     <!-- Entry 3 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -322,7 +326,7 @@
                                                 Here</a></p>
                                     </div>
                                     <!-- Entry 4 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -335,7 +339,7 @@
                                                 Here</a></p>
                                     </div>
                                     <!-- Entry 5 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -347,7 +351,7 @@
                                                 Here</a></p>
                                     </div>
                                     <!-- Entry 6 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -359,7 +363,7 @@
                                                 Here</a></p>
                                     </div>
                                     <!-- Entry 7 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -371,7 +375,7 @@
                                                 Here</a></p>
                                     </div>
                                     <!-- Entry 8 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -388,12 +392,14 @@
                             <!-- Examination Tab -->
                             <div class="ann-panel" id="panel-examination"
                                 style="display:none;height:100%;overflow:hidden;">
-                                <div style="padding:14px 20px;border-bottom:1px solid #e5e7eb;background:#f0f4ff;">
-                                    <h4 style="font-size:15px;font-weight:700;color:#1e3a8a;margin:0;">Examination
+                                <div
+                                    style="padding:14px 20px;border-bottom:1px solid var(--border);background:var(--blue-50);">
+                                    <h4 style="font-size:15px;font-weight:700;color:var(--primary);margin:0;">
+                                        Examination
                                         Notifications:</h4>
                                 </div>
                                 <div class="ann-scroll-inner" style="transition:transform 0.8s ease;">
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -405,7 +411,7 @@
                                                 Here</a>
                                         </p>
                                     </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -423,12 +429,14 @@
                             <!-- Placements Tab -->
                             <div class="ann-panel" id="panel-placements"
                                 style="display:none;height:100%;overflow:hidden;">
-                                <div style="padding:14px 20px;border-bottom:1px solid #e5e7eb;background:#f0f4ff;">
-                                    <h4 style="font-size:15px;font-weight:700;color:#1e3a8a;margin:0;">Placement Drives:
+                                <div
+                                    style="padding:14px 20px;border-bottom:1px solid var(--border);background:var(--blue-50);">
+                                    <h4 style="font-size:15px;font-weight:700;color:var(--primary);margin:0;">Placement
+                                        Drives:
                                     </h4>
                                 </div>
                                 <div class="ann-scroll-inner" style="transition:transform 0.8s ease;">
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -440,7 +448,7 @@
                                                 Here</a>
                                         </p>
                                     </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -458,12 +466,13 @@
                             <!-- Admissions Tab -->
                             <div class="ann-panel" id="panel-admissions"
                                 style="display:none;height:100%;overflow:hidden;">
-                                <div style="padding:14px 20px;border-bottom:1px solid #e5e7eb;background:#f0f4ff;">
-                                    <h4 style="font-size:15px;font-weight:700;color:#1e3a8a;margin:0;">Admission
+                                <div
+                                    style="padding:14px 20px;border-bottom:1px solid var(--border);background:var(--blue-50);">
+                                    <h4 style="font-size:15px;font-weight:700;color:var(--primary);margin:0;">Admission
                                         Updates:</h4>
                                 </div>
                                 <div class="ann-scroll-inner" style="transition:transform 0.8s ease;">
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -476,7 +485,7 @@
                                                 Here</a>
                                         </p>
                                     </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -493,12 +502,14 @@
 
                             <!-- Forum Activities Tab -->
                             <div class="ann-panel" id="panel-forums" style="display:none;height:100%;overflow:hidden;">
-                                <div style="padding:14px 20px;border-bottom:1px solid #e5e7eb;background:#f0f4ff;">
-                                    <h4 style="font-size:15px;font-weight:700;color:#1e3a8a;margin:0;">Forum Activities:
+                                <div
+                                    style="padding:14px 20px;border-bottom:1px solid var(--border);background:var(--blue-50);">
+                                    <h4 style="font-size:15px;font-weight:700;color:var(--primary);margin:0;">Forum
+                                        Activities:
                                     </h4>
                                 </div>
                                 <div class="ann-scroll-inner" style="transition:transform 0.8s ease;">
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -510,7 +521,7 @@
                                                 Here</a>
                                         </p>
                                     </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -522,7 +533,7 @@
                                                 Here</a>
                                         </p>
                                     </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -535,7 +546,7 @@
                                                 Here</a>
                                         </p>
                                     </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -548,7 +559,7 @@
                                                 Here</a>
                                         </p>
                                     </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -561,7 +572,7 @@
                                                 Here</a>
                                         </p>
                                     </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid #f3f4f6;">
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
@@ -663,16 +674,16 @@
                                 tabs.forEach(function (tab) {
                                     tab.addEventListener('click', function () {
                                         tabs.forEach(function (t) {
-                                            t.style.background = '#f9fafb';
-                                            t.style.color = '#374151';
+                                            t.style.background = 'var(--section)';
+                                            t.style.color = 'var(--text)';
                                             t.classList.remove('active');
                                         });
                                         panels.forEach(function (p) {
                                             p.style.display = 'none';
                                             p.classList.remove('active');
                                         });
-                                        tab.style.background = '#2563eb';
-                                        tab.style.color = '#fff';
+                                        tab.style.background = 'var(--secondary)';
+                                        tab.style.color = 'var(--white)';
                                         tab.classList.add('active');
                                         var tp = document.getElementById('panel-' + tab.getAttribute('data-tab'));
                                         if (tp) {
@@ -800,15 +811,17 @@
                     <div
                         class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all group border border-gray-100">
                         <div
-                            class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors">
+                            class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-7 h-7 text-blue-600 group-hover:text-white">
+                                stroke-linejoin="round"
+                                class="w-7 h-7 text-primary group-hover:text-accent transition-colors duration-300">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
                                 <path d="m9 12 2 2 4-4" />
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold mb-4">Credentials</h4>
+                        <h4 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
+                            Credentials</h4>
                         <p class="text-gray-600 text-sm leading-relaxed">NBA & NAAC Accredited with A+ Grade. Ranked
                             among Top 100 in Higher Education Review.</p>
                     </div>
@@ -816,15 +829,17 @@
                     <div
                         class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all group border border-gray-100">
                         <div
-                            class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-emerald-600 transition-colors">
+                            class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-7 h-7 text-emerald-600 group-hover:text-white">
+                                stroke-linejoin="round"
+                                class="w-7 h-7 text-primary group-hover:text-accent transition-colors duration-300">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                                 <path d="M22 3h-6a4 4 0 0 1-4 4v14a3 3 0 0 0 3-3h7z" />
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold mb-4">Teaching Excellence</h4>
+                        <h4 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
+                            Teaching Excellence</h4>
                         <p class="text-gray-600 text-sm leading-relaxed">Joyful journey of learning with JNTUA
                             curriculum and innovative industry-ready process.</p>
                     </div>
@@ -832,15 +847,17 @@
                     <div
                         class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all group border border-gray-100">
                         <div
-                            class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-amber-600 transition-colors">
+                            class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-7 h-7 text-amber-600 group-hover:text-white">
+                                stroke-linejoin="round"
+                                class="w-7 h-7 text-primary group-hover:text-accent transition-colors duration-300">
                                 <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
                                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                             </svg>
                         </div>
-                        <h4 class="text-xl font-bold mb-4">Placements</h4>
+                        <h4 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
+                            Placements</h4>
                         <p class="text-gray-600 text-sm leading-relaxed">Series of training programs bridging the gap
                             between campus and global industrial requirements.</p>
                     </div>
@@ -869,13 +886,13 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- CSE (AI & ML) -->
                     <a href="departments/ai/index.html"
-                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300">
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
                                 <path
                                     d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
                                 <path
@@ -890,7 +907,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">CSE
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">CSE
                                 (AI & ML)</h4>
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>
@@ -898,20 +915,20 @@
 
                     <!-- Computer Science -->
                     <a href="departments/cse/index.html"
-                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-indigo-50 flex items-center justify-center group-hover:bg-indigo-600 transition-colors duration-300">
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-10 h-10 text-indigo-600 group-hover:text-white transition-colors duration-300">
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
                                 <path d="m18 16 4-4-4-4" />
                                 <path d="m6 8-4 4 4 4" />
                                 <path d="m14.5 4-5 16" />
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                                 Computer Science</h4>
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>
@@ -919,13 +936,13 @@
 
                     <!-- Electronics (ECE) -->
                     <a href="departments/ece/index.html"
-                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-emerald-50 flex items-center justify-center group-hover:bg-emerald-600 transition-colors duration-300">
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-10 h-10 text-emerald-600 group-hover:text-white transition-colors duration-300">
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
                                 <rect width="16" height="16" x="4" y="4" rx="2" />
                                 <rect width="6" height="6" x="9" y="9" rx="1" />
                                 <path d="M15 2v2" />
@@ -939,7 +956,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                                 Electronics (ECE)</h4>
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>
@@ -947,18 +964,18 @@
 
                     <!-- Electrical (EEE) -->
                     <a href="departments/eee/index.html"
-                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-600 transition-colors duration-300">
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-10 h-10 text-amber-600 group-hover:text-white transition-colors duration-300">
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
                                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-amber-600 transition-colors">
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                                 Electrical (EEE)</h4>
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>
@@ -966,13 +983,13 @@
 
                     <!-- Civil (CE) -->
                     <a href="departments/ce/index.html"
-                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-orange-50 flex items-center justify-center group-hover:bg-orange-600 transition-colors duration-300">
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-10 h-10 text-orange-600 group-hover:text-white transition-colors duration-300">
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
                                 <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
                                 <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
                                 <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
@@ -983,7 +1000,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                                 Civil (CE)</h4>
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>
@@ -991,20 +1008,20 @@
 
                     <!-- Data Science (DS) -->
                     <a href="departments/ds/index.html"
-                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-cyan-50 flex items-center justify-center group-hover:bg-cyan-600 transition-colors duration-300">
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-10 h-10 text-cyan-600 group-hover:text-white transition-colors duration-300">
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
                                 <ellipse cx="12" cy="5" rx="9" ry="3" />
                                 <path d="M3 5V19A9 3 0 0 0 21 19V5" />
                                 <path d="M3 12A9 3 0 0 0 21 12" />
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-cyan-600 transition-colors">CSE
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">CSE
                                 (DS)</h4>
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>
@@ -1012,20 +1029,20 @@
 
                     <!-- Mechanical (ME) -->
                     <a href="departments/me/index.html"
-                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-red-50 flex items-center justify-center group-hover:bg-red-600 transition-colors duration-300">
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-10 h-10 text-red-600 group-hover:text-white transition-colors duration-300">
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
                                 <path
                                     d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
                                 <circle cx="12" cy="12" r="3" />
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                                 Mechanical (ME)</h4>
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>
@@ -1033,13 +1050,13 @@
 
                     <!-- Artificial Intelligence (AI) -->
                     <a href="departments/ai-only/index.html"
-                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-1">
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
                         <div
-                            class="w-20 h-20 rounded-2xl bg-indigo-50 flex items-center justify-center group-hover:bg-indigo-600 transition-colors duration-300">
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="w-10 h-10 text-indigo-600 group-hover:text-white transition-colors duration-300">
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
                                 <path
                                     d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
                                 <path
@@ -1054,7 +1071,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                                 Artificial Intelligence (AI)</h4>
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>

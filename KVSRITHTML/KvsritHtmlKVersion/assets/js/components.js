@@ -217,7 +217,7 @@ const NAVBAR_HTML = `
 
       <!-- Action Buttons (Apply Now - Rightmost) -->
       <div class="hidden xl:flex items-center pl-4">
-        <a href="admissions.html" class="bg-blue-600 text-white px-5 py-2.5 rounded-full text-[13px] font-bold hover:bg-blue-700 hover:shadow-lg transition-all whitespace-nowrap">Apply Now</a>
+        <a href="admissions.html" class="bg-accent text-white px-5 py-2.5 rounded-full text-[13px] font-bold hover:bg-accent hover:shadow-lg transition-all whitespace-nowrap">Apply Now</a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -241,7 +241,7 @@ const NAVBAR_HTML = `
       <a href="departments/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Departments</a>
       <a href="placements/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Placements</a>
       <a href="student-portal/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Student Portal</a>
-      <a href="admissions.html" class="mx-4 mt-2 bg-blue-600 text-white px-6 py-3 rounded-xl text-center font-bold">Apply Now</a>
+      <a href="admissions.html" class="mx-4 mt-2 bg-accent text-white px-6 py-3 rounded-xl text-center font-bold">Apply Now</a>
     </div>
   </div>
 </nav>
@@ -281,11 +281,11 @@ const FOOTER_HTML = `
       <div>
         <h4 class="text-white font-bold text-lg mb-8 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-1 after:bg-blue-600">Quick Links</h4>
         <ul class="space-y-4 text-sm">
-          <li><a href="about/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> About Us</a></li>
-          <li><a href="admissions.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> Admissions</a></li>
-          <li><a href="academics/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> Academics</a></li>
-          <li><a href="placements/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> Placements</a></li>
-          <li><a href="contact.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> Contact Us</a></li>
+          <li><a href="about/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> About Us</a></li>
+          <li><a href="admissions.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Admissions</a></li>
+          <li><a href="academics/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Academics</a></li>
+          <li><a href="placements/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Placements</a></li>
+          <li><a href="contact.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Contact Us</a></li>
         </ul>
       </div>
 
@@ -293,11 +293,11 @@ const FOOTER_HTML = `
       <div>
         <h4 class="text-white font-bold text-lg mb-8 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-1 after:bg-blue-600">Academics</h4>
         <ul class="space-y-4 text-sm">
-          <li><a href="courses/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> B.Tech Programs</a></li>
-          <li><a href="courses/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> Post Graduation</a></li>
-          <li><a href="exam-cell.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> Exam Cell</a></li>
-          <li><a href="library/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> Library</a></li>
-          <li><a href="facilities/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-blue-600"><path d="m9 18 6-6-6-6"/></svg> Campus Facilities</a></li>
+          <li><a href="courses/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> B.Tech Programs</a></li>
+          <li><a href="courses/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Post Graduation</a></li>
+          <li><a href="exam-cell.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Exam Cell</a></li>
+          <li><a href="library/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Library</a></li>
+          <li><a href="facilities/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Campus Facilities</a></li>
         </ul>
       </div>
 
@@ -306,15 +306,15 @@ const FOOTER_HTML = `
         <h4 class="text-white font-bold text-lg mb-8 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-1 after:bg-blue-600">Get In Touch</h4>
         <ul class="space-y-6 text-sm">
           <li class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-blue-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-accent"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <p class="text-gray-400">Dupadu, NH-44, Kurnool, Andhra Pradesh - 518 218</p>
           </li>
           <li class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-emerald-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
             <p class="text-gray-400">+91 91000 33333</p>
           </li>
           <li class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-amber-500"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <div class="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-accent"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
             <p class="text-gray-400">office@drkvsrit.ac.in</p>
           </li>
         </ul>

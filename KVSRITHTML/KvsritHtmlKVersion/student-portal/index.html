@@ -40,7 +40,7 @@
 
         /* ===== HERO SECTION ===== */
         .student-portal-hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%) !important;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--text) 100%) !important;
             padding: 4rem 0 3rem 0 !important;
             margin: 0 !important;
             position: relative;
@@ -48,7 +48,7 @@
         }
 
         .student-portal-hero h1 {
-            color: #ffffff !important;
+            color: var(--background) !important;
             font-size: 3rem !important;
             font-weight: 800 !important;
             margin: 0 0 1.25rem 0 !important;
@@ -57,7 +57,7 @@
         }
 
         .student-portal-hero p {
-            color: #e0e7ff !important;
+            color: var(--border) !important;
             font-size: 1.25rem !important;
             margin: 0 !important;
             line-height: 1.6 !important;
@@ -66,7 +66,7 @@
 
         /* ===== MAIN CONTENT AREA ===== */
         .student-portal-content {
-            background: #f9fafb !important;
+            background: var(--section) !important;
             padding: 4rem 0 !important;
             min-height: calc(100vh - 124px - 16rem) !important;
             /* Ensure content fills viewport */
@@ -95,8 +95,8 @@
 
         /* ===== INDIVIDUAL CARD STYLING ===== */
         .student-portal-card {
-            background: #ffffff !important;
-            border: 2px solid #e5e7eb !important;
+            background: var(--background) !important;
+            border: 2px solid var(--border) !important;
             border-radius: 12px !important;
             padding: 2rem !important;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -112,7 +112,7 @@
         .student-portal-card:hover {
             transform: translateY(-6px) !important;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
-            border-color: #3b82f6 !important;
+            border-color: var(--secondary) !important;
         }
 
         .student-portal-card-icon {
@@ -133,7 +133,7 @@
         .student-portal-card h3 {
             font-size: 1.25rem !important;
             font-weight: 700 !important;
-            color: #111827 !important;
+            color: var(--text) !important;
             margin: 0 0 0.75rem 0 !important;
             line-height: 1.4 !important;
         }
@@ -153,8 +153,8 @@
         }
 
         .student-portal-login {
-            background: #ffffff !important;
-            border: 2px solid #e5e7eb !important;
+            background: var(--background) !important;
+            border: 2px solid var(--border) !important;
             border-radius: 12px !important;
             padding: 2rem !important;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
@@ -163,7 +163,7 @@
         .student-portal-login h3 {
             font-size: 1.5rem !important;
             font-weight: 700 !important;
-            color: #111827 !important;
+            color: var(--text) !important;
             margin: 0 0 1.5rem 0 !important;
         }
 
@@ -171,14 +171,14 @@
             display: block !important;
             font-size: 0.938rem !important;
             font-weight: 600 !important;
-            color: #374151 !important;
+            color: var(--text) !important;
             margin-bottom: 0.5rem !important;
         }
 
         .student-portal-login input {
             width: 100% !important;
             padding: 0.75rem 1rem !important;
-            border: 2px solid #d1d5db !important;
+            border: 2px solid var(--border) !important;
             border-radius: 8px !important;
             font-size: 0.938rem !important;
             margin-bottom: 1.25rem !important;
@@ -189,15 +189,15 @@
 
         .student-portal-login input:focus {
             outline: none !important;
-            border-color: #3b82f6 !important;
+            border-color: var(--secondary) !important;
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
         }
 
         .student-portal-login button {
             width: 100% !important;
             padding: 0.875rem !important;
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
-            color: #ffffff !important;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%) !important;
+            color: var(--background) !important;
             border: none !important;
             border-radius: 8px !important;
             font-size: 1rem !important;
@@ -208,7 +208,7 @@
         }
 
         .student-portal-login button:hover {
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+            background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%) !important;
             transform: translateY(-2px) !important;
             box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3) !important;
         }
@@ -217,7 +217,7 @@
             display: block !important;
             text-align: center !important;
             font-size: 0.875rem !important;
-            color: #3b82f6 !important;
+            color: var(--secondary) !important;
             margin-top: 1rem !important;
             text-decoration: none !important;
             font-weight: 500 !important;
@@ -225,13 +225,13 @@
 
         .student-portal-login a:hover {
             text-decoration: underline !important;
-            color: #2563eb !important;
+            color: var(--primary) !important;
         }
 
         /* ===== UPDATES SECTION ===== */
         .student-portal-updates {
-            background: #ffffff !important;
-            border: 2px solid #e5e7eb !important;
+            background: var(--background) !important;
+            border: 2px solid var(--border) !important;
             border-radius: 12px !important;
             padding: 2rem !important;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
@@ -240,7 +240,7 @@
         .student-portal-updates h3 {
             font-size: 1.25rem !important;
             font-weight: 700 !important;
-            color: #111827 !important;
+            color: var(--text) !important;
             margin: 0 0 1.5rem 0 !important;
             display: flex !important;
             align-items: center !important;
@@ -249,7 +249,7 @@
 
         .student-portal-update-item {
             padding: 1rem 0 !important;
-            border-bottom: 1px solid #f3f4f6 !important;
+            border-bottom: 1px solid var(--section) !important;
         }
 
         .student-portal-update-item:last-child {
@@ -267,20 +267,20 @@
         .student-portal-update-link {
             font-size: 0.938rem !important;
             font-weight: 600 !important;
-            color: #111827 !important;
+            color: var(--text) !important;
             text-decoration: none !important;
             display: block !important;
             transition: color 0.2s ease !important;
         }
 
         .student-portal-update-link:hover {
-            color: #3b82f6 !important;
+            color: var(--secondary) !important;
         }
 
         /* ===== COLOR CLASSES FOR ICONS ===== */
         .icon-blue {
-            background: #dbeafe !important;
-            color: #1e40af !important;
+            background: var(--hover) !important;
+            color: var(--primary) !important;
         }
 
         .icon-green {
@@ -310,8 +310,8 @@
 
         /* Icon hover color inversions */
         .student-portal-card:hover .icon-blue {
-            background: #1e40af !important;
-            color: #ffffff !important;
+            background: var(--primary) !important;
+            color: var(--background) !important;
         }
 
         .student-portal-card:hover .icon-green {
@@ -398,13 +398,13 @@
 
         /* ===== ACCESSIBILITY ===== */
         .student-portal-card:focus {
-            outline: 3px solid #3b82f6 !important;
+            outline: 3px solid var(--secondary) !important;
             outline-offset: 2px !important;
         }
 
         .student-portal-login input:focus,
         .student-portal-login button:focus {
-            outline: 2px solid #3b82f6 !important;
+            outline: 2px solid var(--secondary) !important;
             outline-offset: 2px !important;
         }
 
@@ -553,7 +553,7 @@
                             <h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" style="color: #3b82f6;">
+                                    stroke-linejoin="round" style="color: var(--secondary);">
                                     <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
                                     <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
                                 </svg>
