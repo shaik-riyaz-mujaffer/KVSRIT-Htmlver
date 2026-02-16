@@ -75,6 +75,8 @@
 
     /* Accessibility Overrides */
     --text-accessible-blue: var(--primary);
+    --text-accessible-emerald: #047857;
+    --text-accessible-amber: #b45309;
     --text-accessible-gold: #856404;
     /* Darker gold for text readability */
 }
