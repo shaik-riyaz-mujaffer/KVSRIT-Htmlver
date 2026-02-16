@@ -7,20 +7,54 @@
    CSS VARIABLES - Design System Palette
    ======================================== */
 :root {
-    /* Primary Colors (Blue) */
-    --primary: #1e3a8a;
-    --secondary: #dc2626;
+    /* ========================================
+       STRICT BRANDING SYSTEM
+       Based on Official College Logo
+       ======================================== */
 
-    /* Blue Palette */
+    /* Primary Color: #1E40AF (Blue) */
+    --primary: #1E40AF;
+    --primary-hover: #1e3a8a;
+    /* Slightly darker for hover states on primary */
+
+    /* Secondary Color: #2563EB (Lighter Blue) */
+    --secondary: #2563EB;
+
+    /* Accent Color: #D4AF37 (Gold) */
+    --accent: #D4AF37;
+    --accent-hover: #b5952f;
+
+    /* Backgrounds */
+    --background: #FFFFFF;
+    --section: #F8FAFC;
+    --surface: #FFFFFF;
+
+    /* Typography */
+    --text: #0F172A;
+    --text-light: #475569;
+    --text-inverted: #FFFFFF;
+
+    /* Borders & UI Elements */
+    --border: #E2E8F0;
+    --hover: #DBEAFE;
+
+    /* Functional Colors */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+
+    /* Legacy/Palette Mapping for Compatibility (remapped to new brand) */
     --blue-50: #eff6ff;
     --blue-100: #dbeafe;
     --blue-200: #bfdbfe;
     --blue-300: #93c5fd;
     --blue-400: #60a5fa;
     --blue-500: #3b82f6;
-    --blue-600: #2563eb;
+    --blue-600: var(--secondary);
+    /* #2563EB */
     --blue-700: #1d4ed8;
-    --blue-800: #1e40af;
+    --blue-800: var(--primary);
+    /* #1E40AF */
     --blue-900: #1e3a8a;
 
     /* Gray Palette */
@@ -33,60 +67,16 @@
     --gray-600: #4b5563;
     --gray-700: #374151;
     --gray-800: #1f2937;
-    --gray-900: #111827;
+    --gray-900: var(--text);
+    /* #0F172A */
 
-    /* Red Palette */
-    --red-50: #fef2f2;
-    --red-100: #fee2e2;
-    --red-500: #ef4444;
-    --red-600: #dc2626;
-
-    /* Emerald/Green Palette */
-    --emerald-50: #ecfdf5;
-    --emerald-100: #d1fae5;
-    --emerald-500: #10b981;
-    --emerald-600: #059669;
-
-    /* Amber/Yellow Palette */
-    --amber-50: #fffbeb;
-    --amber-100: #fef3c7;
-    --amber-500: #f59e0b;
-    --amber-600: #d97706;
-
-    /* Indigo Palette */
-    --indigo-50: #eef2ff;
-    --indigo-100: #e0e7ff;
-    --indigo-500: #6366f1;
-    --indigo-600: #4f46e5;
-
-    /* Cyan Palette */
-    --cyan-50: #ecfeff;
-    --cyan-100: #cffafe;
-    --cyan-500: #06b6d4;
-    --cyan-600: #0891b2;
-
-    /* Orange Palette */
-    --orange-50: #fff7ed;
-    --orange-100: #ffedd5;
-    --orange-500: #f97316;
-    --orange-600: #ea580c;
-
-    /* White */
+    /* Generic Color Maps */
     --white: #ffffff;
 
-    /* Accessibility Overrides (WCAG AA Compliant) */
-    --text-accessible-blue: #1d4ed8;
-    /* blue-700 */
-    --text-accessible-emerald: #047857;
-    /* emerald-700 */
-    --text-accessible-amber: #b45309;
-    /* amber-700 */
-    --text-accessible-cyan: #0e7490;
-    /* cyan-700 */
-    --text-accessible-orange: #c2410c;
-    /* orange-700 */
-    --text-accessible-gray-iso: #4b5563;
-    /* gray-600 for icons/light-text */
+    /* Accessibility Overrides */
+    --text-accessible-blue: var(--primary);
+    --text-accessible-gold: #856404;
+    /* Darker gold for text readability */
 }
 
 /* ========================================
@@ -928,6 +918,14 @@ a {
     background-color: var(--orange-50);
 }
 
+.bg-accent {
+    background-color: var(--accent) !important;
+}
+
+.hover\:bg-accent:hover {
+    background-color: var(--accent-hover) !important;
+}
+
 /* Text Colors */
 .text-white {
     color: var(--white);
@@ -1017,6 +1015,14 @@ a {
 
 .text-orange-600 {
     color: var(--text-accessible-orange);
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+.hover\:text-accent:hover {
+    color: var(--accent-hover) !important;
 }
 
 /* Opacity text colors */
@@ -2125,6 +2131,7 @@ a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
 }
 
 .line-clamp-3 {
@@ -2132,6 +2139,7 @@ a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
 }
 
 /* ========================================
@@ -2224,6 +2232,18 @@ a {
 
 .group:hover .group-hover\:opacity-100 {
     opacity: 1;
+}
+
+.group:hover .group-hover\:bg-primary {
+    background-color: var(--primary);
+}
+
+.group:hover .group-hover\:text-white {
+    color: #ffffff;
+}
+
+.group:hover .group-hover\:text-accent {
+    color: var(--accent);
 }
 
 /* ========================================

@@ -8,12 +8,22 @@
  */
 
 :root {
-    --loader-primary: #00d4ff;
-    --loader-secondary: #7c3aed;
-    --loader-accent: #3b82f6;
-    --loader-glow-cyan: rgba(0, 212, 255, 0.6);
-    --loader-glow-purple: rgba(124, 58, 237, 0.6);
-    --loader-glow-blue: rgba(59, 130, 246, 0.4);
+    /* Strict Brand Palette */
+    --loader-primary: #1E40AF;
+    /* Deep Blue */
+    --loader-secondary: #D4AF37;
+    /* Gold */
+    --loader-accent: #2563EB;
+    /* Bright Blue */
+
+    /* Adjusted Glows */
+    --loader-glow-cyan: rgba(30, 64, 175, 0.6);
+    /* Blue Glow */
+    --loader-glow-purple: rgba(212, 175, 55, 0.6);
+    /* Gold Glow */
+    --loader-glow-blue: rgba(37, 99, 235, 0.4);
+    /* Bright Blue Glow */
+
     --loader-bg-dark: #0a0a1a;
 }
 
@@ -76,9 +86,9 @@
     overflow: hidden;
     z-index: 10;
     background: #000;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4),
-        inset 0 0 15px rgba(0, 212, 255, 0.2);
-    border: 2px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 20px rgba(30, 64, 175, 0.4),
+        inset 0 0 15px rgba(212, 175, 55, 0.2);
+    border: 2px solid var(--loader-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,7 +178,7 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     margin-bottom: 35px;
     opacity: 0.9;
-    box-shadow: 0 0 20px var(--loader-glow-cyan);
+    box-shadow: 0 0 20px var(--loader-glow-blue);
 }
 
 .loader-core::after {
@@ -255,12 +265,12 @@
     0%,
     100% {
         transform: scale(1);
-        box-shadow: 0 0 20px var(--loader-glow-cyan);
+        box-shadow: 0 0 20px var(--loader-glow-blue);
     }
 
     50% {
         transform: scale(1.1);
-        box-shadow: 0 0 35px var(--loader-glow-cyan);
+        box-shadow: 0 0 35px var(--loader-glow-blue);
     }
 }
 
@@ -283,7 +293,7 @@
     0%,
     100% {
         transform: scale(1);
-        filter: brightness(1) drop-shadow(0 0 5px var(--loader-glow-cyan));
+        filter: brightness(1) drop-shadow(0 0 5px var(--loader-glow-blue));
     }
 
     50% {
